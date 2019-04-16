@@ -1,10 +1,4 @@
----
-typora-copy-images-to: ./
----
-
 # BlindsQuotationSystem
-<<<<<<< HEAD
-
 This system is designed for a blinds company who still uses the traditional pen and paper method to do their quotations. This system will heavily speed up this process and make the employees work more efficiently.
 
 # The system will be able to:
@@ -19,5 +13,3 @@ This system is designed for a blinds company who still uses the traditional pen 
 
 
 =======
-
-![Class Diagram](C:\Users\AJ\Desktop\Class Diagram.png)
