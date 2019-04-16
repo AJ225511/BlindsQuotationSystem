@@ -13,3 +13,5 @@ This system is designed for a blinds company who still uses the traditional pen 
 4) Enable employees to check on supplier status and escalate things if necessary 
 
 ![Class Diagram](C:\Users\AJ\Downloads\Class Diagram.png)
+=======
+>>>>>>> b381857d1dcb39606fe0f92cc541109a21d28f21
