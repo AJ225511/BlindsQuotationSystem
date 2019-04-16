@@ -23,6 +23,18 @@ public class Client {
         return clientName;
     }
 
+    public String getClientAddress(){
+        return clientAddress;
+    }
+
+    public String getClientEmail(){
+        return clientEmail;
+    }
+
+    public int getClientPhone(){
+        return clientPhone;
+    }
+
     public static class Builder{
 
         private String clientId, clientName, clientAddress, clientEmail;
