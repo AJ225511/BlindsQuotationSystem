@@ -1,6 +1,6 @@
 package domains.PaymentMethod;
 
-public abstract class PaymentMethod {
+public class PaymentMethod {
 
     private String paymentId,paymentDate, paymentAmount;
 
@@ -22,7 +22,7 @@ public abstract class PaymentMethod {
 
     public String getPaymentAmount() { return paymentAmount;}
 
-    public static abstract class Builder{
+    public static class Builder{
 
         private String paymentId, paymentDate, paymentAmount;
 
@@ -41,7 +41,9 @@ public abstract class PaymentMethod {
             return this;
         }
 
-        public abstract PaymentMethod build();
+        public PaymentMethod build(){
+            return new PaymentMethod(this);
+        }
 
     }
 

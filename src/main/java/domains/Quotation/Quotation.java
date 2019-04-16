@@ -1,6 +1,6 @@
 package domains.Quotation;
 
-public abstract class Quotation {
+public class Quotation {
 
     private String quotationId, quotationDate;
 
@@ -15,7 +15,7 @@ public abstract class Quotation {
 
     public String getQuotationDate(){return quotationDate;}
 
-    public static abstract class Builder{
+    public static class Builder{
 
         private String quotationId, quotationDate;
 
@@ -29,7 +29,9 @@ public abstract class Quotation {
             return this;
         }
 
-        public abstract Quotation build();
+        public Quotation build(){
+            return new Quotation(this);
+        }
 
 
         @Override

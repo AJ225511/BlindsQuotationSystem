@@ -1,6 +1,6 @@
 package domains.Employeee;
 
-public abstract class Employee {
+public class Employee {
 
     private String employeeId, firstName, lastName, address;
 
@@ -45,7 +45,7 @@ public abstract class Employee {
         this.address=address;
     }
 
-    public static abstract class Builder{
+    public static class Builder{
 
         private String employeeId, firstName, lastName, address;
 
@@ -69,7 +69,9 @@ public abstract class Employee {
             return this;
         }
 
-        public abstract Employee build();
+        public Employee build(){
+            return new Employee(this);
+        }
 
         @Override
         public String toString(){

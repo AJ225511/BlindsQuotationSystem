@@ -1,6 +1,6 @@
 package domains.Client;
 
-public abstract class Lead {
+public class Lead {
 
     private String leadId, leadDate;
 
@@ -19,7 +19,7 @@ public abstract class Lead {
         return leadDate;
     }
 
-    public abstract static class Builder{
+    public static class Builder{
 
         private String leadId, leadDate;
 
@@ -33,7 +33,9 @@ public abstract class Lead {
             return this;
         }
 
-        public abstract Lead build();
+        public Lead build(){
+            return new Lead(this);
+        }
     }
 
     @Override
