@@ -11,5 +11,5 @@ This system is designed for a blinds company who still uses the traditional pen 
 
 4) Enable employees to check on supplier status and escalate things if necessary 
 
-
+![](https://github.com/AJ225511/BlindsQuotationSystem/blob/master/Class%20Diagram.png)
 =======
