@@ -1,7 +1,7 @@
 # BlindsQuotationSystem
 This system is designed for a blinds company who still uses the traditional pen and paper method to do their quotations. This system will heavily speed up this process and make the employees work more efficiently.
 
-# The system will be able to:
+The system will do the following:
 
 1) Generate quotations much easier
 
