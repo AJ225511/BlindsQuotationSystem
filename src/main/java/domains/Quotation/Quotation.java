@@ -15,6 +15,10 @@ public class Quotation {
 
     public String getQuotationDate(){return quotationDate;}
 
+    public void setQuotationId(String quotationId) {
+        this.quotationId = quotationId;
+    }
+
     public static class Builder{
 
         private String quotationId, quotationDate;

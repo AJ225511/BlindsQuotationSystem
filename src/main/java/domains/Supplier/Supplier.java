@@ -2,22 +2,29 @@ package domains.Supplier;
 
 public class Supplier {
 
-    private String supplierName, supplierAddress;
+    private String supplierId, supplierName, supplierAddress;
 
     public Supplier(){}
 
     public Supplier(Builder builder){
         this.supplierName = builder.supplierName;
         this.supplierAddress = builder.supplierAddress;
+        this.supplierId = builder.supplierId;
     }
 
     public String getSupplierName(){return supplierName;}
 
     public String getSupplierAddress(){return supplierAddress;}
 
+    public String getSupplierId() {return supplierId;}
+
+    public void setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+    }
+
     public static class Builder{
 
-        private String supplierName, supplierAddress;
+        private String supplierName, supplierAddress, supplierId;
 
         public Builder supplierName(String supplierName){
             this.supplierName=supplierName;
@@ -26,6 +33,11 @@ public class Supplier {
 
         public Builder supplierAddress(String supplierAddress){
             this.supplierAddress=supplierAddress;
+            return this;
+        }
+
+        public Builder supplierId(String supplierId){
+            this.supplierId=supplierId;
             return this;
         }
 

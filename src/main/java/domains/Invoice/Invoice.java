@@ -24,6 +24,10 @@ public class Invoice {
         return invoiceItems;
     }
 
+    public void setInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
+    }
+
     public static class Builder{
 
         private String invoiceId, invoiceDate, invoiceItems;

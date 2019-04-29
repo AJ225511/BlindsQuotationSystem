@@ -2,13 +2,14 @@ package domains.Company;
 
 public class Company {
 
-    private String companyName, companyAddress;
+    private String companyName, companyAddress, companyId;
 
     public Company(){}
 
     public Company(Builder builder){
         this.companyName = builder.companyName;
         this.companyAddress = builder.companyAddress;
+        this.companyId = builder.companyId;
     }
 
     public String getCompanyAddress(){
@@ -19,9 +20,15 @@ public class Company {
         return companyName;
     }
 
+    public String getCompanyId() {return companyId;}
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
     public static class Builder{
 
-        private String companyName, companyAddress;
+        private String companyName, companyAddress, companyId;
 
         public Builder companyName(String companyName){
             this.companyName=companyName;
@@ -30,6 +37,11 @@ public class Company {
 
         public Builder companyAddress(String companyAddress){
             this.companyAddress=companyAddress;
+            return this;
+        }
+
+        public Builder companyId(String companyId){
+            this.companyId =companyId;
             return this;
         }
 
@@ -43,6 +55,7 @@ public class Company {
         return "Company{" +
                 "companyName='" + companyName + '\'' +
                 ", companyAddress='" + companyAddress + '\'' +
+                ", companyId='" + companyId + '\'' +
                 '}';
     }
 

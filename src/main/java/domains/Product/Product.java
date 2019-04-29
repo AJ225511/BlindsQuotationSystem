@@ -15,6 +15,10 @@ public class Product {
 
     public String getProductName(){return productName;}
 
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
     public static class Builder{
 
         private String productId, productName;

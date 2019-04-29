@@ -14,6 +14,10 @@ public class AssembleStatus {
         return assembleStatusId;
     }
 
+    public void setAssembleStatusId(String assembleStatusId) {
+        this.assembleStatusId = assembleStatusId;
+    }
+
     public static class Builder{
 
         private String assembleStatusId;

@@ -14,6 +14,10 @@ public class SupplierLeadTime {
         return leadTimeId;
     }
 
+    public void setLeadTimeId(String leadTimeId) {
+        this.leadTimeId = leadTimeId;
+    }
+
     public static class Builder{
 
         private String leadTimeId;

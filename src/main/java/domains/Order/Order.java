@@ -24,6 +24,10 @@ public class Order {
         return orderItems;
     }
 
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
     public static class Builder{
 
         private String orderId, orderDate, orderItems;

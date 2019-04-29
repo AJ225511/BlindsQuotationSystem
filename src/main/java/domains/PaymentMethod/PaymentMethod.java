@@ -2,7 +2,8 @@ package domains.PaymentMethod;
 
 public class PaymentMethod {
 
-    private String paymentId,paymentDate, paymentAmount;
+    private String paymentId,paymentDate;
+    private int paymentAmount;
 
     public PaymentMethod(){}
 
@@ -20,11 +21,16 @@ public class PaymentMethod {
         return paymentDate;
     }
 
-    public String getPaymentAmount() { return paymentAmount;}
+    public int getPaymentAmount() { return paymentAmount;}
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+    }
 
     public static class Builder{
 
-        private String paymentId, paymentDate, paymentAmount;
+        private String paymentId, paymentDate;
+        private int paymentAmount;
 
         public Builder paymentId(String paymentId){
             this.paymentId=paymentId;
@@ -36,7 +42,7 @@ public class PaymentMethod {
             return this;
         }
 
-        public Builder paymentAmount(String paymentAmount){
+        public Builder paymentAmount(int paymentAmount){
             this.paymentAmount=paymentAmount;
             return this;
         }

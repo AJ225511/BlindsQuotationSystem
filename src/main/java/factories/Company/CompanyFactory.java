@@ -1,6 +1,7 @@
 package factories.Company;
 
 import domains.Company.Company;
+import util.Misc;
 
 public class CompanyFactory {
 
@@ -8,6 +9,7 @@ public class CompanyFactory {
         return new Company.Builder()
                 .companyName(companyName)
                 .companyAddress(companyAddress)
+                .companyId(Misc.generateId())
                 .build();
     }
 }

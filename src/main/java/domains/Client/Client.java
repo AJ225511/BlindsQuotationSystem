@@ -35,6 +35,16 @@ public class Client {
         return clientPhone;
     }
 
+    public void setClientId(String clientId){ this.clientId = clientId;}
+
+    public void setClientName(String clientName) {this.clientName =clientName;}
+
+    public void setClientAddress(String clientAddress) {this.clientAddress = clientAddress;}
+
+    public void setClientEmail(String clientEmail) {this.clientEmail =clientEmail;}
+
+    public void setClientPhone(int clientPhone) {this.clientPhone = clientPhone;}
+
     public static class Builder{
 
         private String clientId, clientName, clientAddress, clientEmail;

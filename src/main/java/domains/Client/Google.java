@@ -14,6 +14,8 @@ public class Google extends Lead{
         return browseDate;
     }
 
+    public void setBrowseDate(String browseDate) {this.browseDate = browseDate;}
+
     public static class Builder extends Lead.Builder{
 
         private String browseDate;

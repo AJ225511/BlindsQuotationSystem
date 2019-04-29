@@ -19,6 +19,8 @@ public class Lead {
         return leadDate;
     }
 
+    public void setLeadId(String leadId){this.leadId = leadId;}
+
     public static class Builder{
 
         private String leadId, leadDate;
