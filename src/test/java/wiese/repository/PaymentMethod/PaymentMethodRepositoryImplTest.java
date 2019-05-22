@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.PaymentMethod;
 
 import wiese.domains.PaymentMethod.PaymentMethod;
 import wiese.factories.PaymentMethod.PaymentMethodFactory;

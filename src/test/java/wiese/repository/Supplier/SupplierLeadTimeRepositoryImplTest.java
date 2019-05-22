@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.Supplier;
 
 import wiese.domains.Supplier.SupplierLeadTime;
 import wiese.factories.Supplier.SupplierLeadTimeFactory;

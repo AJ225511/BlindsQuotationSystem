@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.Quotation;
 
 import wiese.domains.Quotation.Quotation;
 import wiese.factories.Quotation.QuotationFactory;

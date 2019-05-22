@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.Product;
 
 import wiese.domains.Product.Product;
 import wiese.factories.Product.ProductFactory;

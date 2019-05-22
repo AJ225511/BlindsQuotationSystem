@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.Order;
 
 import wiese.domains.Order.Order;
 import wiese.factories.Order.OrderFactory;

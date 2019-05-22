@@ -1,4 +1,4 @@
-package wiese.repository;
+package wiese.repository.Employee;
 
 import wiese.domains.Employeee.Employee;
 import wiese.factories.Employee.EmployeeFactory;
