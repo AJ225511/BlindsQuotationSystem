@@ -22,7 +22,7 @@ public class LeadRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Lead lead = LeadFactory.getLead("10 April 2019");
         leadRepository.create(lead);
@@ -31,7 +31,7 @@ public class LeadRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Lead lead = LeadFactory.getLead("10 April 2019");
             leadRepository.create(lead);
@@ -40,14 +40,13 @@ public class LeadRepositoryImplTest {
             System.out.println(lead);
             Lead lead1 = leadRepository.read(Integer.parseInt(lead.getLeadId()));
             Assert.assertEquals(lead, lead1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
 
     @Test
-    public void update(){
+    public void update() {
         Lead lead = LeadFactory.getLead("10 April 2019");
         leadRepository.create(lead);
 
@@ -62,7 +61,7 @@ public class LeadRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Lead lead = LeadFactory.getLead("10 April 2019");
             leadRepository.create(lead);
@@ -73,9 +72,7 @@ public class LeadRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

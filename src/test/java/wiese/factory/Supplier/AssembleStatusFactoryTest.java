@@ -8,11 +8,12 @@ import wiese.factories.Supplier.AssembleStatusFactory;
 
 public class AssembleStatusFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getAssembleStatus(){
+    public void getAssembleStatus() {
 
         AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
         Assert.assertNotNull(assembleStatus.getAssembleStatusId());

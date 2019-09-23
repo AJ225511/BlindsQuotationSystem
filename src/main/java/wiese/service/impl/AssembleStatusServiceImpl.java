@@ -15,12 +15,12 @@ public class AssembleStatusServiceImpl implements AssembleStatusService {
     private AssembleStatusRepository repository;
     private Integer id;
 
-    public AssembleStatusServiceImpl(){
+    public AssembleStatusServiceImpl() {
         repository = AssembleStatusRepositoryImpl.getRepository();
     }
 
-    public AssembleStatusService getService(){
-        if(service == null) service = new AssembleStatusServiceImpl();
+    public AssembleStatusService getService() {
+        if (service == null) service = new AssembleStatusServiceImpl();
         return service;
     }
 

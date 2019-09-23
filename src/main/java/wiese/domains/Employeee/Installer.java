@@ -4,35 +4,37 @@ public class Installer extends Employee {
 
     private String installDate;
 
-    public Installer(){}
-
-    public Installer(Builder builder){
-        super(builder);
-        this.installDate= builder.installDate;
+    public Installer() {
     }
 
-    public String getInstallDate(){
+    public Installer(Builder builder) {
+        super(builder);
+        this.installDate = builder.installDate;
+    }
+
+    public String getInstallDate() {
         return installDate;
     }
 
-    public void setInstallDate(String installDate){
-        this.installDate=installDate;
+    public void setInstallDate(String installDate) {
+        this.installDate = installDate;
     }
 
-    public static class Builder extends Employee.Builder{
+    public static class Builder extends Employee.Builder {
 
         private String installDate;
 
-        public Builder(){
+        public Builder() {
             super();
         }
 
-        public Builder installDate(String installDate){
-            this.installDate=installDate;
+        public Builder installDate(String installDate) {
+            this.installDate = installDate;
             return this;
         }
+
         @Override
-        public Employee build(){
+        public Employee build() {
             return new Installer(this);
         }
 

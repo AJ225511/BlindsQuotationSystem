@@ -6,38 +6,41 @@ public class Lead {
 
     private String leadId, leadDate;
 
-    public Lead(){}
+    public Lead() {
+    }
 
-    public Lead(Builder builder){
+    public Lead(Builder builder) {
         this.leadDate = builder.leadDate;
         this.leadId = builder.leadId;
     }
 
-    public String getLeadId(){
+    public String getLeadId() {
         return leadId;
     }
 
-    public String getLeadDate(){
+    public String getLeadDate() {
         return leadDate;
     }
 
-    public void setLeadId(String leadId){this.leadId = leadId;}
+    public void setLeadId(String leadId) {
+        this.leadId = leadId;
+    }
 
-    public static class Builder{
+    public static class Builder {
 
         private String leadId, leadDate;
 
-        public Builder leadId(String leadId){
-            this.leadId=leadId;
+        public Builder leadId(String leadId) {
+            this.leadId = leadId;
             return this;
         }
 
-        public Builder leadDate(String leadDate){
-            this.leadDate=leadDate;
+        public Builder leadDate(String leadDate) {
+            this.leadDate = leadDate;
             return this;
         }
 
-        public Lead build(){
+        public Lead build() {
             return new Lead(this);
         }
     }
@@ -49,16 +52,17 @@ public class Lead {
                 ", leadDate='" + leadDate + '\'' +
                 '}';
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Lead lead = (Lead) o;
         return leadId.equals(lead.leadId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(leadId);
     }
 }

@@ -15,12 +15,12 @@ public class CompanyServiceImpl implements CompanyService {
     private CompanyRepository repository;
     private Integer id;
 
-    public CompanyServiceImpl(){
+    public CompanyServiceImpl() {
         repository = CompanyRepositoryImpl.getRepository();
     }
 
-    public CompanyService getService(){
-        if(service == null) service = new CompanyServiceImpl();
+    public CompanyService getService() {
+        if (service == null) service = new CompanyServiceImpl();
         return service;
     }
 

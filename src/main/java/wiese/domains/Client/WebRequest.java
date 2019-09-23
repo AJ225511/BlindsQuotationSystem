@@ -6,23 +6,24 @@ public class WebRequest extends Lead {
 
     private String requestId;
 
-    public WebRequest(){}
-
-    public WebRequest(Builder builder){
-        super(builder);
-        this.requestId=builder.requestId;
+    public WebRequest() {
     }
 
-    public String getRequestId(){
+    public WebRequest(Builder builder) {
+        super(builder);
+        this.requestId = builder.requestId;
+    }
+
+    public String getRequestId() {
         return requestId;
     }
 
-    public static class Builder extends Lead.Builder{
+    public static class Builder extends Lead.Builder {
 
         private String requestId;
 
-        public Builder requestId(String requestId){
-            this.requestId=requestId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -38,16 +39,17 @@ public class WebRequest extends Lead {
                 "requestId='" + requestId + '\'' +
                 '}';
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         WebRequest webRequest = (WebRequest) o;
         return requestId.equals(webRequest.requestId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(requestId);
     }
 }

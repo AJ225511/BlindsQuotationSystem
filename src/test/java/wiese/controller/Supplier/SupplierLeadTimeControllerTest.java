@@ -22,7 +22,7 @@ public class SupplierLeadTimeControllerTest {
     private String baseURL = "http://localhost:8080/supplierLeadTime";
 
     @Test
-    public void create(){
+    public void create() {
         SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
         supplierLeadTime.setLeadTimeId(supplierLeadTime.getLeadTimeId());
 
@@ -33,39 +33,38 @@ public class SupplierLeadTimeControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         SupplierLeadTime supplierLeadTime = restTemplate.getForObject(baseURL + "/supplierLeadTime/1", SupplierLeadTime.class);
         assertNotNull(supplierLeadTime);
         System.out.println(supplierLeadTime.getLeadTimeId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        SupplierLeadTime supplierLeadTime = restTemplate.getForObject(baseURL = "/supplierLeadTime/"+id, SupplierLeadTime.class);
+        SupplierLeadTime supplierLeadTime = restTemplate.getForObject(baseURL = "/supplierLeadTime/" + id, SupplierLeadTime.class);
 
         restTemplate.put(baseURL + "/supplierLeadTime/" + id, SupplierLeadTime.class);
-        SupplierLeadTime updatedSupplierLeadTime = restTemplate.getForObject(baseURL + "/supplierLeadTime/" +id, SupplierLeadTime.class);
+        SupplierLeadTime updatedSupplierLeadTime = restTemplate.getForObject(baseURL + "/supplierLeadTime/" + id, SupplierLeadTime.class);
         assertNotNull(updatedSupplierLeadTime);
         System.out.println(updatedSupplierLeadTime);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        SupplierLeadTime supplierLeadTime = restTemplate.getForObject(baseURL = "/supplierLeadTime/"+id, SupplierLeadTime.class);
+        SupplierLeadTime supplierLeadTime = restTemplate.getForObject(baseURL = "/supplierLeadTime/" + id, SupplierLeadTime.class);
         assertNotNull(supplierLeadTime);
         restTemplate.put(baseURL + "/supplierLeadTime/" + id, SupplierLeadTime.class);
-        try{
-            supplierLeadTime = restTemplate.getForObject(baseURL + "/supplierLeadTime/" +id, SupplierLeadTime.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            supplierLeadTime = restTemplate.getForObject(baseURL + "/supplierLeadTime/" + id, SupplierLeadTime.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllSupplierLeadTimes(){
+    public void testGetAllSupplierLeadTimes() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

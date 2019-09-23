@@ -22,7 +22,7 @@ public class InvoiceControllerTest {
     private String baseURL = "http://localhost:8080/invoice";
 
     @Test
-    public void create(){
+    public void create() {
         Invoice invoice = InvoiceFactory.getInvoice("14 June 2019", "1x Venetian Blinds");
         invoice.setInvoiceId(invoice.getInvoiceId());
 
@@ -33,39 +33,38 @@ public class InvoiceControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Invoice invoice = restTemplate.getForObject(baseURL + "/invoice/1", Invoice.class);
         assertNotNull(invoice);
         System.out.println(invoice.getInvoiceId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Invoice invoice = restTemplate.getForObject(baseURL = "/invoice/"+id, Invoice.class);
+        Invoice invoice = restTemplate.getForObject(baseURL = "/invoice/" + id, Invoice.class);
 
         restTemplate.put(baseURL + "/invoice/" + id, Invoice.class);
-        Invoice updatedInvoice = restTemplate.getForObject(baseURL + "/invoice/" +id, Invoice.class);
+        Invoice updatedInvoice = restTemplate.getForObject(baseURL + "/invoice/" + id, Invoice.class);
         assertNotNull(updatedInvoice);
         System.out.println(updatedInvoice);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Invoice invoice = restTemplate.getForObject(baseURL = "/invoice/"+id, Invoice.class);
+        Invoice invoice = restTemplate.getForObject(baseURL = "/invoice/" + id, Invoice.class);
         assertNotNull(invoice);
         restTemplate.put(baseURL + "/invoice/" + id, Invoice.class);
-        try{
-            invoice = restTemplate.getForObject(baseURL + "/invoice/" +id, Invoice.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            invoice = restTemplate.getForObject(baseURL + "/invoice/" + id, Invoice.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllInvoices(){
+    public void testGetAllInvoices() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

@@ -22,7 +22,7 @@ public class AssembleStatusControllerTest {
     private String baseURL = "http://localhost:8080/assembleStatus";
 
     @Test
-    public void create(){
+    public void create() {
         AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
         assembleStatus.setAssembleStatusId(assembleStatus.getAssembleStatusId());
 
@@ -33,39 +33,38 @@ public class AssembleStatusControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         AssembleStatus assembleStatus = restTemplate.getForObject(baseURL + "/assembleStatus/1", AssembleStatus.class);
         assertNotNull(assembleStatus);
         System.out.println(assembleStatus.getAssembleStatusId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        AssembleStatus assembleStatus = restTemplate.getForObject(baseURL = "/assembleStatus/"+id, AssembleStatus.class);
+        AssembleStatus assembleStatus = restTemplate.getForObject(baseURL = "/assembleStatus/" + id, AssembleStatus.class);
 
         restTemplate.put(baseURL + "/assembleStatus/" + id, AssembleStatus.class);
-        AssembleStatus updatedAssembleStatus = restTemplate.getForObject(baseURL + "/assembleStatus/" +id, AssembleStatus.class);
+        AssembleStatus updatedAssembleStatus = restTemplate.getForObject(baseURL + "/assembleStatus/" + id, AssembleStatus.class);
         assertNotNull(updatedAssembleStatus);
         System.out.println(updatedAssembleStatus);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        AssembleStatus assembleStatus = restTemplate.getForObject(baseURL = "/assembleStatus/"+id, AssembleStatus.class);
+        AssembleStatus assembleStatus = restTemplate.getForObject(baseURL = "/assembleStatus/" + id, AssembleStatus.class);
         assertNotNull(assembleStatus);
         restTemplate.put(baseURL + "/assembleStatus/" + id, AssembleStatus.class);
-        try{
-            assembleStatus = restTemplate.getForObject(baseURL + "/assembleStatus/" +id, AssembleStatus.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            assembleStatus = restTemplate.getForObject(baseURL + "/assembleStatus/" + id, AssembleStatus.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllAssembleStatuss(){
+    public void testGetAllAssembleStatuss() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

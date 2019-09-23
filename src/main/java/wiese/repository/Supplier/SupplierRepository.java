@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface SupplierRepository extends Repository <Supplier, Integer> {
+public interface SupplierRepository extends Repository<Supplier, Integer> {
     Set<Supplier> getAll();
 }

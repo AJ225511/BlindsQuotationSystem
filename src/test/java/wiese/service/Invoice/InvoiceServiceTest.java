@@ -18,7 +18,7 @@ public class InvoiceServiceTest {
     private InvoiceServiceImpl invoiceService;
 
     @Test
-    public void create(){
+    public void create() {
         Invoice invoice = InvoiceFactory.getInvoice("12 May 2019", "1x Venetian Blinds");
         invoiceService.create(invoice);
 
@@ -27,15 +27,14 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Invoice invoice = InvoiceFactory.getInvoice("12 May 2019", "1x Venetian Blinds");
             invoiceService.create(invoice);
 
             Invoice invoice1 = invoiceService.read(Integer.parseInt(invoice.getInvoiceId()));
             assertEquals(invoice, invoice1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class InvoiceServiceTest {
             Invoice invoice1 = InvoiceFactory.getInvoice("15 May 2019", "5x Venetian Blinds");
             invoice1.setInvoiceId(invoice.getInvoiceId());
             invoiceService.update(invoice1);
-            System.out.println("Original: \n"+invoice);
-            System.out.println("Updated: \n"+invoice1);
+            System.out.println("Original: \n" + invoice);
+            System.out.println("Updated: \n" + invoice1);
 
             Invoice invoice2 = invoiceService.read(Integer.parseInt(invoice1.getInvoiceId()));
             assertEquals(invoice1, invoice2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Invoice invoice = InvoiceFactory.getInvoice("22 May 2019", "3x Venetian Blinds");
             invoiceService.create(invoice);
@@ -69,7 +68,7 @@ public class InvoiceServiceTest {
             assertNotNull(invoiceService.getAll());
             Invoice invoice1 = invoiceService.read(Integer.parseInt(invoice.getInvoiceId()));
             assertNull(invoice1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

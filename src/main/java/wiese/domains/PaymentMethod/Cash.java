@@ -4,23 +4,24 @@ public class Cash extends PaymentMethod {
 
     private int cashAmount;
 
-    public Cash(){}
-
-    public Cash(Builder builder){
-        super(builder);
-        this.cashAmount=builder.cashAmount;
+    public Cash() {
     }
 
-    public int getCashAmount(){
+    public Cash(Builder builder) {
+        super(builder);
+        this.cashAmount = builder.cashAmount;
+    }
+
+    public int getCashAmount() {
         return cashAmount;
     }
 
-    public static class Builder extends PaymentMethod.Builder{
+    public static class Builder extends PaymentMethod.Builder {
 
         private int cashAmount;
 
-        public Builder cashAmount(int cashAmount){
-            this.cashAmount=cashAmount;
+        public Builder cashAmount(int cashAmount) {
+            this.cashAmount = cashAmount;
             return this;
         }
 
@@ -33,7 +34,7 @@ public class Cash extends PaymentMethod {
     @Override
     public String toString() {
         return "Cash{" +
-                "cashAmount='" +cashAmount + '\'' +
+                "cashAmount='" + cashAmount + '\'' +
                 '}';
     }
 }

@@ -6,36 +6,41 @@ public class Quotation {
 
     private String quotationId, quotationDate;
 
-    public Quotation(){}
+    public Quotation() {
+    }
 
-    public Quotation(Builder builder){
+    public Quotation(Builder builder) {
         this.quotationId = builder.quotationId;
         this.quotationDate = builder.quotationDate;
     }
 
-    public String getQuotationId(){return quotationId;}
+    public String getQuotationId() {
+        return quotationId;
+    }
 
-    public String getQuotationDate(){return quotationDate;}
+    public String getQuotationDate() {
+        return quotationDate;
+    }
 
     public void setQuotationId(String quotationId) {
         this.quotationId = quotationId;
     }
 
-    public static class Builder{
+    public static class Builder {
 
         private String quotationId, quotationDate;
 
-        public Builder quotationId(String quotationId){
-            this.quotationId=quotationId;
+        public Builder quotationId(String quotationId) {
+            this.quotationId = quotationId;
             return this;
         }
 
-        public Builder quotationDate(String quotationDate){
-            this.quotationDate=quotationDate;
+        public Builder quotationDate(String quotationDate) {
+            this.quotationDate = quotationDate;
             return this;
         }
 
-        public Quotation build(){
+        public Quotation build() {
             return new Quotation(this);
         }
 
@@ -47,16 +52,17 @@ public class Quotation {
                     ", quotationDate='" + quotationDate + '\'' +
                     '}';
         }
+
         @Override
-        public boolean equals(Object o){
-            if(this == o) return true;
-            if(o == null || getClass() != o.getClass()) return false;
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
             Quotation quotation = (Quotation) o;
             return quotationId.equals(quotation.quotationId);
         }
 
         @Override
-        public int hashCode(){
+        public int hashCode() {
             return Objects.hash(quotationId);
         }
     }

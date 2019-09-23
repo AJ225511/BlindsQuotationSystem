@@ -6,23 +6,24 @@ public class QuotationItemStatus extends Quotation {
 
     private String quotationItemStatusId;
 
-    public QuotationItemStatus(){}
-
-    public QuotationItemStatus(Builder builder){
-        super(builder);
-        this.quotationItemStatusId=builder.quotationItemStatusId;
+    public QuotationItemStatus() {
     }
 
-    public String getQuotationItemStatusId(){
+    public QuotationItemStatus(Builder builder) {
+        super(builder);
+        this.quotationItemStatusId = builder.quotationItemStatusId;
+    }
+
+    public String getQuotationItemStatusId() {
         return quotationItemStatusId;
     }
 
-    public static class Builder extends Quotation.Builder{
+    public static class Builder extends Quotation.Builder {
 
         private String quotationItemStatusId;
 
-        public Builder quotationItemStatusId(String quotationItemStatusId){
-            this.quotationItemStatusId=quotationItemStatusId;
+        public Builder quotationItemStatusId(String quotationItemStatusId) {
+            this.quotationItemStatusId = quotationItemStatusId;
             return this;
         }
 
@@ -38,16 +39,17 @@ public class QuotationItemStatus extends Quotation {
                 "quotationItemStatusId='" + quotationItemStatusId + '\'' +
                 '}';
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         QuotationItemStatus quotationItemStatus = (QuotationItemStatus) o;
         return quotationItemStatusId.equals(quotationItemStatus.quotationItemStatusId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(quotationItemStatusId);
     }
 }

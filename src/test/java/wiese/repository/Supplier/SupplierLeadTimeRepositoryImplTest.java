@@ -22,14 +22,14 @@ public class SupplierLeadTimeRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
         SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
         supplierLeadTimeRepository.create(supplierLeadTime);
         Assert.assertNotNull(supplierLeadTimeRepository.getAll());
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
             supplierLeadTimeRepository.create(supplierLeadTime);
@@ -38,14 +38,13 @@ public class SupplierLeadTimeRepositoryImplTest {
 
             SupplierLeadTime supplierLeadTime1 = supplierLeadTimeRepository.read(Integer.parseInt(supplierLeadTime.getLeadTimeId()));
             System.out.println(supplierLeadTime1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
 
     @Test
-    public void update(){
+    public void update() {
         SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
         supplierLeadTimeRepository.create(supplierLeadTime);
 
@@ -57,12 +56,12 @@ public class SupplierLeadTimeRepositoryImplTest {
         System.out.println(supplierLeadTime2);
 
         SupplierLeadTime supplierLeadTime3 = supplierLeadTimeRepository.find(supplierLeadTime2.getLeadTimeId());
-        Assert.assertEquals(supplierLeadTime2,supplierLeadTime3);
+        Assert.assertEquals(supplierLeadTime2, supplierLeadTime3);
         System.out.println(supplierLeadTime3);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
             supplierLeadTimeRepository.create(supplierLeadTime);
@@ -71,9 +70,7 @@ public class SupplierLeadTimeRepositoryImplTest {
             supplierLeadTimeRepository.delete(Integer.parseInt(supplierLeadTime.getLeadTimeId()));
             SupplierLeadTime deleted = supplierLeadTimeRepository.find(supplierLeadTime.getLeadTimeId());
             Assert.assertNull(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

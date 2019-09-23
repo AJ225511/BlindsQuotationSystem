@@ -4,23 +4,24 @@ public class CreditCard extends PaymentMethod {
 
     private String savings;
 
-    public CreditCard(){}
-
-    public CreditCard(Builder builder){
-        super(builder);
-        this.savings=builder.savings;
+    public CreditCard() {
     }
 
-    public String getSavings(){
+    public CreditCard(Builder builder) {
+        super(builder);
+        this.savings = builder.savings;
+    }
+
+    public String getSavings() {
         return savings;
     }
 
-    public static class Builder extends PaymentMethod.Builder{
+    public static class Builder extends PaymentMethod.Builder {
 
         private String savings;
 
-        public Builder savings(String savings){
-            this.savings=savings;
+        public Builder savings(String savings) {
+            this.savings = savings;
             return this;
         }
 
@@ -33,7 +34,7 @@ public class CreditCard extends PaymentMethod {
     @Override
     public String toString() {
         return "CreditCard{" +
-                "savings='" +savings + '\'' +
+                "savings='" + savings + '\'' +
                 '}';
     }
 }

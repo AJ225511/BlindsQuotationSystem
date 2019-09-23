@@ -8,11 +8,12 @@ import wiese.factories.Product.ProductFactory;
 
 public class ProductFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getProduct(){
+    public void getProduct() {
 
         Product product = ProductFactory.getProduct("Venetian Blinds");
         Assert.assertNotNull(product.getProductId());

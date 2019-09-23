@@ -1,27 +1,30 @@
 package wiese.domains.Client;
 
-public class Google extends Lead{
+public class Google extends Lead {
     private String browseDate;
 
-    public Google(){}
-
-    public Google(Builder builder){
-        super(builder);
-        this.browseDate=builder.browseDate;
+    public Google() {
     }
 
-    public String getBrowseDateDate(){
+    public Google(Builder builder) {
+        super(builder);
+        this.browseDate = builder.browseDate;
+    }
+
+    public String getBrowseDateDate() {
         return browseDate;
     }
 
-    public void setBrowseDate(String browseDate) {this.browseDate = browseDate;}
+    public void setBrowseDate(String browseDate) {
+        this.browseDate = browseDate;
+    }
 
-    public static class Builder extends Lead.Builder{
+    public static class Builder extends Lead.Builder {
 
         private String browseDate;
 
-        public Builder browseDate(String browseDate){
-            this.browseDate=browseDate;
+        public Builder browseDate(String browseDate) {
+            this.browseDate = browseDate;
             return this;
         }
 

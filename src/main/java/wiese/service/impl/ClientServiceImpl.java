@@ -17,12 +17,12 @@ public class ClientServiceImpl implements ClientService {
     private ClientRepository repository;
     private Integer id;
 
-    public ClientServiceImpl(){
+    public ClientServiceImpl() {
         repository = ClientRepositoryImpl.getRepository();
     }
 
-    public ClientService getService(){
-        if(service == null) service = new ClientServiceImpl();
+    public ClientService getService() {
+        if (service == null) service = new ClientServiceImpl();
         return service;
     }
 

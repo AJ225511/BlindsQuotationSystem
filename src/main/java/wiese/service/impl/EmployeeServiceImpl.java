@@ -9,18 +9,18 @@ import wiese.service.Employee.EmployeeService;
 import java.util.Set;
 
 @Service("EmployeeServiceImpl")
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeServiceImpl service = null;
     private EmployeeRepository repository;
     private Integer id;
 
-    public EmployeeServiceImpl(){
+    public EmployeeServiceImpl() {
         repository = EmployeeRepositoryImpl.getRepository();
     }
 
-    public EmployeeService getService(){
-        if(service == null) service = new EmployeeServiceImpl();
+    public EmployeeService getService() {
+        if (service == null) service = new EmployeeServiceImpl();
         return service;
     }
 

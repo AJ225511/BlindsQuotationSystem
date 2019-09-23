@@ -15,12 +15,12 @@ public class InvoiceServiceImpl implements InvoiceService {
     private InvoiceRepository repository;
     private Integer id;
 
-    public InvoiceServiceImpl(){
+    public InvoiceServiceImpl() {
         repository = InvoiceRepositoryImpl.getRepository();
     }
 
-    public InvoiceService getService(){
-        if(service == null) service = new InvoiceServiceImpl();
+    public InvoiceService getService() {
+        if (service == null) service = new InvoiceServiceImpl();
         return service;
     }
 

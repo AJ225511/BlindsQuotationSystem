@@ -1,38 +1,40 @@
 package wiese.domains.Employeee;
 
-public class Domestic extends Employee{
+public class Domestic extends Employee {
 
     private String daysOnDuty;
 
-    public Domestic(){}
-
-    public Domestic(Builder builder){
-        super(builder);
-        this.daysOnDuty= builder.daysOnDuty;
+    public Domestic() {
     }
 
-    public String getDaysOnDuty(){
+    public Domestic(Builder builder) {
+        super(builder);
+        this.daysOnDuty = builder.daysOnDuty;
+    }
+
+    public String getDaysOnDuty() {
         return daysOnDuty;
     }
 
-    public void setDaysOnDuty(String daysOnDuty){
-        this.daysOnDuty=daysOnDuty;
+    public void setDaysOnDuty(String daysOnDuty) {
+        this.daysOnDuty = daysOnDuty;
     }
 
-    public static class Builder extends Employee.Builder{
+    public static class Builder extends Employee.Builder {
 
         private String daysOnDuty;
 
-        public Builder(){
+        public Builder() {
             super();
         }
 
-        public Builder daysOnDuty(String daysOnDuty){
-            this.daysOnDuty=daysOnDuty;
+        public Builder daysOnDuty(String daysOnDuty) {
+            this.daysOnDuty = daysOnDuty;
             return this;
         }
+
         @Override
-        public Employee build(){
+        public Employee build() {
             return new Domestic(this);
         }
 

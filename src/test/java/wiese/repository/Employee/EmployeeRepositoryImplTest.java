@@ -22,7 +22,7 @@ public class EmployeeRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "West Beach");
         employeeRepository.create(employee);
@@ -31,7 +31,7 @@ public class EmployeeRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "West Beach");
             employeeRepository.create(employee);
@@ -41,15 +41,14 @@ public class EmployeeRepositoryImplTest {
 
             Employee employee1 = employeeRepository.read(Integer.parseInt(employee.getEmployeeId()));
             Assert.assertEquals(employee, employee1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "West Beach");
         employeeRepository.create(employee);
@@ -67,7 +66,7 @@ public class EmployeeRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "West Beach");
             employeeRepository.create(employee);
@@ -78,9 +77,7 @@ public class EmployeeRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

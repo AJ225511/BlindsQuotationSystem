@@ -22,7 +22,7 @@ public class SupplierControllerTest {
     private String baseURL = "http://localhost:8080/supplier";
 
     @Test
-    public void create(){
+    public void create() {
         Supplier supplier = SupplierFactory.getSupplier("Bay View Blinds", "6 Camp Street");
         supplier.setSupplierId(supplier.getSupplierId());
 
@@ -33,39 +33,38 @@ public class SupplierControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Supplier supplier = restTemplate.getForObject(baseURL + "/supplier/1", Supplier.class);
         assertNotNull(supplier);
         System.out.println(supplier.getSupplierId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Supplier supplier = restTemplate.getForObject(baseURL = "/supplier/"+id, Supplier.class);
+        Supplier supplier = restTemplate.getForObject(baseURL = "/supplier/" + id, Supplier.class);
 
         restTemplate.put(baseURL + "/supplier/" + id, Supplier.class);
-        Supplier updatedSupplier = restTemplate.getForObject(baseURL + "/supplier/" +id, Supplier.class);
+        Supplier updatedSupplier = restTemplate.getForObject(baseURL + "/supplier/" + id, Supplier.class);
         assertNotNull(updatedSupplier);
         System.out.println(updatedSupplier);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Supplier supplier = restTemplate.getForObject(baseURL = "/supplier/"+id, Supplier.class);
+        Supplier supplier = restTemplate.getForObject(baseURL = "/supplier/" + id, Supplier.class);
         assertNotNull(supplier);
         restTemplate.put(baseURL + "/supplier/" + id, Supplier.class);
-        try{
-            supplier = restTemplate.getForObject(baseURL + "/supplier/" +id, Supplier.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            supplier = restTemplate.getForObject(baseURL + "/supplier/" + id, Supplier.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllSuppliers(){
+    public void testGetAllSuppliers() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

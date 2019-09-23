@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface AssembleStatusRepository extends Repository <AssembleStatus, Integer> {
+public interface AssembleStatusRepository extends Repository<AssembleStatus, Integer> {
     Set<AssembleStatus> getAll();
 }

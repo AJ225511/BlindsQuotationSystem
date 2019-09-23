@@ -22,7 +22,7 @@ public class ProductControllerTest {
     private String baseURL = "http://localhost:8080/product";
 
     @Test
-    public void create(){
+    public void create() {
         Product product = ProductFactory.getProduct("Venetian");
         product.setProductId(product.getProductId());
 
@@ -33,39 +33,38 @@ public class ProductControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Product product = restTemplate.getForObject(baseURL + "/product/1", Product.class);
         assertNotNull(product);
         System.out.println(product.getProductId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Product product = restTemplate.getForObject(baseURL = "/product/"+id, Product.class);
+        Product product = restTemplate.getForObject(baseURL = "/product/" + id, Product.class);
 
         restTemplate.put(baseURL + "/product/" + id, Product.class);
-        Product updatedProduct = restTemplate.getForObject(baseURL + "/product/" +id, Product.class);
+        Product updatedProduct = restTemplate.getForObject(baseURL + "/product/" + id, Product.class);
         assertNotNull(updatedProduct);
         System.out.println(updatedProduct);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Product product = restTemplate.getForObject(baseURL = "/product/"+id, Product.class);
+        Product product = restTemplate.getForObject(baseURL = "/product/" + id, Product.class);
         assertNotNull(product);
         restTemplate.put(baseURL + "/product/" + id, Product.class);
-        try{
-            product = restTemplate.getForObject(baseURL + "/product/" +id, Product.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            product = restTemplate.getForObject(baseURL + "/product/" + id, Product.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllProducts(){
+    public void testGetAllProducts() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

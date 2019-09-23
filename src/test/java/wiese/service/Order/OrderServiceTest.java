@@ -18,7 +18,7 @@ public class OrderServiceTest {
     private OrderServiceImpl orderService;
 
     @Test
-    public void create(){
+    public void create() {
         Order order = OrderFactory.getOrder("12 May 2019", "1x Venetian Blinds");
         orderService.create(order);
 
@@ -27,15 +27,14 @@ public class OrderServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Order order = OrderFactory.getOrder("12 May 2019", "1x Venetian Blinds");
             orderService.create(order);
 
             Order order1 = orderService.read(Integer.parseInt(order.getOrderId()));
             assertEquals(order, order1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class OrderServiceTest {
             Order order1 = OrderFactory.getOrder("15 May 2019", "5x Venetian Blinds");
             order1.setOrderId(order.getOrderId());
             orderService.update(order1);
-            System.out.println("Original: \n"+order);
-            System.out.println("Updated: \n"+order1);
+            System.out.println("Original: \n" + order);
+            System.out.println("Updated: \n" + order1);
 
             Order order2 = orderService.read(Integer.parseInt(order1.getOrderId()));
             assertEquals(order1, order2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Order order = OrderFactory.getOrder("22 May 2019", "3x Venetian Blinds");
             orderService.create(order);
@@ -69,7 +68,7 @@ public class OrderServiceTest {
             assertNotNull(orderService.getAll());
             Order order1 = orderService.read(Integer.parseInt(order.getOrderId()));
             assertNull(order1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

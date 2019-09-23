@@ -8,21 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Repository("ProductInMemory")
-public class ProductRepositoryImpl implements ProductRepository{
+public class ProductRepositoryImpl implements ProductRepository {
 
     private static ProductRepositoryImpl repository = null;
     private Set<Product> products;
 
-    private ProductRepositoryImpl(){
+    private ProductRepositoryImpl() {
         this.products = new HashSet<>();
     }
 
-    public static ProductRepositoryImpl getRepository(){
-        if(repository == null) repository = new ProductRepositoryImpl();
+    public static ProductRepositoryImpl getRepository() {
+        if (repository == null) repository = new ProductRepositoryImpl();
         return repository;
     }
 
-    public Product find(String id){
+    public Product find(String id) {
         return products.stream().filter(product -> product.getProductId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class ProductRepositoryImpl implements ProductRepository{
     @Override
     public Product update(Product product) {
         Product product1 = find(product.getProductId());
-        if(products.contains(product1)){
+        if (products.contains(product1)) {
             products.remove(product1);
             products.add(product);
         }
@@ -58,10 +58,9 @@ public class ProductRepositoryImpl implements ProductRepository{
     @Override
     public Product read(Integer id) {
         Product product = find(Integer.toString(id));
-        if(product == null){
+        if (product == null) {
             return null;
-        }
-        else{
+        } else {
             return product;
         }
     }

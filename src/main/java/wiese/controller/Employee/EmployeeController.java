@@ -17,30 +17,30 @@ public class EmployeeController {
     private EmployeeServiceImpl employeeService;
 
     @PostMapping("/create")
-    public Employee create(@RequestBody Employee employee){
+    public Employee create(@RequestBody Employee employee) {
         return employeeService.create(employee);
     }
 
     @PostMapping("/update")
-    public Employee employee(@RequestBody Employee employee){
+    public Employee employee(@RequestBody Employee employee) {
         return employeeService.update(employee);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         employeeService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Employee read(@PathVariable int id){
+    public Employee read(@PathVariable int id) {
         return employeeService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Employee> getAll(){
+    public Set<Employee> getAll() {
         return employeeService.getAll();
     }
 

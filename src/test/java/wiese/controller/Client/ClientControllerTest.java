@@ -23,9 +23,9 @@ public class ClientControllerTest {
     private String baseURL = "http://localhost:8080/client";
 
     @Test
-    public void create(){
+    public void create() {
         Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
-        client.setClientId(client.getClientId());
+        client.setClientId("randomid");
 
         ResponseEntity<Client> postResponse = restTemplate.postForEntity(baseURL + "/create", client, Client.class);
         assertNotNull(postResponse);
@@ -34,43 +34,43 @@ public class ClientControllerTest {
     }
 
     @Test
-    public void findId(){
-        Client client = restTemplate.getForObject(baseURL + "/client/1", Client.class);
+    public void findId() {
+        Client client = restTemplate.getForObject(baseURL + "/find/randomid", Client.class);
         assertNotNull(client);
         System.out.println(client.getClientName());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Client client = restTemplate.getForObject(baseURL = "/client/"+id, Client.class);
+        Client client = restTemplate.getForObject(baseURL = "/update/" + "randomid", Client.class);
+        client.setClientName("AJ");
 
-        restTemplate.put(baseURL + "/client/" + id, Client.class);
-        Client updatedClient = restTemplate.getForObject(baseURL + "/client/" +id, Client.class);
+        restTemplate.put(baseURL + "/upate/" + "randomid", Client.class);
+        Client updatedClient = restTemplate.getForObject(baseURL + "/update/" + "randomid", Client.class);
         assertNotNull(updatedClient);
         System.out.println(updatedClient);
     }
 
     @Test
-    public void delete(){
-        int id = 2;
-        Client client = restTemplate.getForObject(baseURL = "/client/"+id, Client.class);
+    public void delete() {
+        int id = 1;
+        Client client = restTemplate.getForObject(baseURL = "/find/" + "randomid", Client.class);
         assertNotNull(client);
-        restTemplate.put(baseURL + "/client/" + id, Client.class);
-        try{
-            client = restTemplate.getForObject(baseURL + "/client/" +id, Client.class);
-        }
-        catch (final HttpClientErrorException e){
+        restTemplate.delete(baseURL + "/delete/" + "randomid", Client.class);
+        try {
+            client = restTemplate.getForObject(baseURL + "/find/" + "randomid", Client.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllClients(){
+    public void testGetAllClients() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
-        ResponseEntity<String> response = restTemplate.exchange(baseURL + "/create", HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate.exchange(baseURL + "/getAll", HttpMethod.GET, entity, String.class);
         assertNotNull(response.getBody());
     }
 

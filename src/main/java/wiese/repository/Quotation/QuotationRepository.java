@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface QuotationRepository extends Repository <Quotation, Integer> {
+public interface QuotationRepository extends Repository<Quotation, Integer> {
     Set<Quotation> getAll();
 }

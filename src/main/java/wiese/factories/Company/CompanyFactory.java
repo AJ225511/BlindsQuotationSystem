@@ -5,7 +5,7 @@ import wiese.util.Misc;
 
 public class CompanyFactory {
 
-    public static Company getCompany(String companyName, String companyAddress){
+    public static Company getCompany(String companyName, String companyAddress) {
         return new Company.Builder()
                 .companyName(companyName)
                 .companyAddress(companyAddress)

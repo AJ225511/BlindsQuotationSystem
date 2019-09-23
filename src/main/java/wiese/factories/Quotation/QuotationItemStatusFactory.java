@@ -5,9 +5,9 @@ import wiese.util.Misc;
 
 public class QuotationItemStatusFactory {
 
-        public static QuotationItemStatus getQuotationItemStatus(){
-            return( QuotationItemStatus) new  QuotationItemStatus.Builder()
-                    .quotationItemStatusId(Misc.generateId())
-                    .build();
-        }
+    public static QuotationItemStatus getQuotationItemStatus() {
+        return (QuotationItemStatus) new QuotationItemStatus.Builder()
+                .quotationItemStatusId(Misc.generateId())
+                .build();
+    }
 }

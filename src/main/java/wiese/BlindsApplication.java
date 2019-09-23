@@ -9,11 +9,11 @@ import org.springframework.web.client.RestTemplate;
 public class BlindsApplication {
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SpringApplication.run(BlindsApplication.class, args);
     }
 }

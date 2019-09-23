@@ -10,9 +10,10 @@ public class Client {
     private String clientId, clientName, clientAddress, clientEmail;
     private int clientPhone;
 
-    private Client(){}
+    private Client() {
+    }
 
-    public Client(Builder builder){
+    public Client(Builder builder) {
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
         this.clientAddress = builder.clientAddress;
@@ -20,92 +21,102 @@ public class Client {
         this.clientPhone = builder.clientPhone;
     }
 
-    public String getClientId(){
+    public String getClientId() {
         return clientId;
     }
 
-    public String getClientName(){
+    public String getClientName() {
         return clientName;
     }
 
-    public String getClientAddress(){
+    public String getClientAddress() {
         return clientAddress;
     }
 
-    public String getClientEmail(){
+    public String getClientEmail() {
         return clientEmail;
     }
 
-    public int getClientPhone(){
+    public int getClientPhone() {
         return clientPhone;
     }
 
-    public void setClientId(String clientId){ this.clientId = clientId;}
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
 
-    public void setClientName(String clientName) {this.clientName =clientName;}
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
 
-    public void setClientAddress(String clientAddress) {this.clientAddress = clientAddress;}
+    public void setClientAddress(String clientAddress) {
+        this.clientAddress = clientAddress;
+    }
 
-    public void setClientEmail(String clientEmail) {this.clientEmail =clientEmail;}
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
+    }
 
-    public void setClientPhone(int clientPhone) {this.clientPhone = clientPhone;}
+    public void setClientPhone(int clientPhone) {
+        this.clientPhone = clientPhone;
+    }
 
-    public static class Builder{
+    public static class Builder {
 
         private String clientId, clientName, clientAddress, clientEmail;
         private int clientPhone;
 
-        public Builder clientId(String clientId){
-            this.clientId=clientId;
+        public Builder clientId(String clientId) {
+            this.clientId = clientId;
             return this;
         }
 
-        public Builder clientName(String clientName){
-            this.clientName=clientName;
+        public Builder clientName(String clientName) {
+            this.clientName = clientName;
             return this;
         }
 
-        public Builder clientAddress(String clientAddress){
-            this.clientAddress=clientAddress;
+        public Builder clientAddress(String clientAddress) {
+            this.clientAddress = clientAddress;
             return this;
         }
 
-        public Builder clientEmail(String clientEmail){
-            this.clientEmail=clientEmail;
+        public Builder clientEmail(String clientEmail) {
+            this.clientEmail = clientEmail;
             return this;
         }
 
-        public Builder clientPhone(int clientPhone){
+        public Builder clientPhone(int clientPhone) {
             this.clientPhone = clientPhone;
             return this;
         }
 
-        public Client build(){
+        public Client build() {
             return new Client(this);
         }
     }
 
     @Override
-    public String toString(){
-        return "Client{"+
-                "clientId: '"+ clientId + '\''+
-                ", clientName: '" + clientName +'\'' +
-                ", clientAddress: '" + clientAddress +'\'' +
-                ", clientEmail: '" + clientEmail +'\'' +
-                ", clientPhone: '" + clientPhone +'\'' +
+    public String toString() {
+        return "Client{" +
+                "clientId: '" + clientId + '\'' +
+                ", clientName: '" + clientName + '\'' +
+                ", clientAddress: '" + clientAddress + '\'' +
+                ", clientEmail: '" + clientEmail + '\'' +
+                ", clientPhone: '" + clientPhone + '\'' +
                 '}';
     }
 
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
         return clientId.equals(client.clientId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(clientId);
     }
 }

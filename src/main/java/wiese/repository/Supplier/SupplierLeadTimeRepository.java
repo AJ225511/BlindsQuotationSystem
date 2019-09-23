@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface SupplierLeadTimeRepository extends Repository <SupplierLeadTime, Integer> {
+public interface SupplierLeadTimeRepository extends Repository<SupplierLeadTime, Integer> {
     Set<SupplierLeadTime> getAll();
 }

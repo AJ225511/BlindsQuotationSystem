@@ -17,30 +17,30 @@ public class AssembleStatusController {
     private AssembleStatusServiceImpl assembleStatusService;
 
     @PostMapping("/create")
-    public AssembleStatus create(@RequestBody AssembleStatus assembleStatus){
+    public AssembleStatus create(@RequestBody AssembleStatus assembleStatus) {
         return assembleStatusService.create(assembleStatus);
     }
 
     @PostMapping("/update")
-    public AssembleStatus assembleStatus(@RequestBody AssembleStatus assembleStatus){
+    public AssembleStatus assembleStatus(@RequestBody AssembleStatus assembleStatus) {
         return assembleStatusService.update(assembleStatus);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         assembleStatusService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public AssembleStatus read(@PathVariable int id){
+    public AssembleStatus read(@PathVariable int id) {
         return assembleStatusService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<AssembleStatus> getAll(){
+    public Set<AssembleStatus> getAll() {
         return assembleStatusService.getAll();
     }
 

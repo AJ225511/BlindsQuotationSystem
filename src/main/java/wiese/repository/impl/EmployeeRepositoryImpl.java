@@ -8,21 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Repository("EmployeeInMemory")
-public class EmployeeRepositoryImpl implements EmployeeRepository{
+public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     private static EmployeeRepositoryImpl repository = null;
     private Set<Employee> employees;
 
-    private EmployeeRepositoryImpl(){
+    private EmployeeRepositoryImpl() {
         this.employees = new HashSet<>();
     }
 
-    public static EmployeeRepositoryImpl getRepository(){
-        if(repository == null) repository = new EmployeeRepositoryImpl();
+    public static EmployeeRepositoryImpl getRepository() {
+        if (repository == null) repository = new EmployeeRepositoryImpl();
         return repository;
     }
 
-    public Employee find(String id){
+    public Employee find(String id) {
         return employees.stream().filter(employee -> employee.getEmployeeId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     @Override
     public Employee update(Employee employee) {
         Employee employee1 = find(employee.getEmployeeId());
-        if(employees.contains(employee1)){
+        if (employees.contains(employee1)) {
             employees.remove(employee1);
             employees.add(employee);
         }
@@ -58,10 +58,9 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     @Override
     public Employee read(Integer id) {
         Employee employee = find(Integer.toString(id));
-        if(employee == null){
+        if (employee == null) {
             return null;
-        }
-        else{
+        } else {
             return employee;
         }
     }

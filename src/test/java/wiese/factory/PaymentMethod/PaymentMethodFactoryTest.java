@@ -8,11 +8,12 @@ import wiese.factories.PaymentMethod.PaymentMethodFactory;
 
 public class PaymentMethodFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getPaymentMethod(){
+    public void getPaymentMethod() {
 
         PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(600, "11 April 2019");
         Assert.assertNotNull(paymentMethod.getPaymentId());

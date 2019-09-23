@@ -17,30 +17,30 @@ public class ProductController {
     private ProductServiceImpl productService;
 
     @PostMapping("/create")
-    public Product create(@RequestBody Product product){
+    public Product create(@RequestBody Product product) {
         return productService.create(product);
     }
 
     @PostMapping("/update")
-    public Product product(@RequestBody Product product){
+    public Product product(@RequestBody Product product) {
         return productService.update(product);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         productService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Product read(@PathVariable int id){
+    public Product read(@PathVariable int id) {
         return productService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Product> getAll(){
+    public Set<Product> getAll() {
         return productService.getAll();
     }
 

@@ -8,11 +8,12 @@ import wiese.factories.Company.CompanyFactory;
 
 public class CompanyFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getCompany(){
+    public void getCompany() {
 
         Company company = CompanyFactory.getCompany("Taylor Blinds", "12 Bratton Way");
         Assert.assertNotNull(company.getCompanyId());

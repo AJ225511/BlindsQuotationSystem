@@ -22,7 +22,7 @@ public class PaymentMethodControllerTest {
     private String baseURL = "http://localhost:8080/paymentMethod";
 
     @Test
-    public void create(){
+    public void create() {
         PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(600, "12 June 2019");
         paymentMethod.setPaymentId(paymentMethod.getPaymentId());
 
@@ -33,39 +33,38 @@ public class PaymentMethodControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         PaymentMethod paymentMethod = restTemplate.getForObject(baseURL + "/paymentMethod/1", PaymentMethod.class);
         assertNotNull(paymentMethod);
         System.out.println(paymentMethod.getPaymentId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        PaymentMethod paymentMethod = restTemplate.getForObject(baseURL = "/paymentMethod/"+id, PaymentMethod.class);
+        PaymentMethod paymentMethod = restTemplate.getForObject(baseURL = "/paymentMethod/" + id, PaymentMethod.class);
 
         restTemplate.put(baseURL + "/paymentMethod/" + id, PaymentMethod.class);
-        PaymentMethod updatedPaymentMethod = restTemplate.getForObject(baseURL + "/paymentMethod/" +id, PaymentMethod.class);
+        PaymentMethod updatedPaymentMethod = restTemplate.getForObject(baseURL + "/paymentMethod/" + id, PaymentMethod.class);
         assertNotNull(updatedPaymentMethod);
         System.out.println(updatedPaymentMethod);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        PaymentMethod paymentMethod = restTemplate.getForObject(baseURL = "/paymentMethod/"+id, PaymentMethod.class);
+        PaymentMethod paymentMethod = restTemplate.getForObject(baseURL = "/paymentMethod/" + id, PaymentMethod.class);
         assertNotNull(paymentMethod);
         restTemplate.put(baseURL + "/paymentMethod/" + id, PaymentMethod.class);
-        try{
-            paymentMethod = restTemplate.getForObject(baseURL + "/paymentMethod/" +id, PaymentMethod.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            paymentMethod = restTemplate.getForObject(baseURL + "/paymentMethod/" + id, PaymentMethod.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllPaymentMethods(){
+    public void testGetAllPaymentMethods() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

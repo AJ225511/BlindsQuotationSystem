@@ -9,11 +9,12 @@ import wiese.domains.Employeee.Employee;
 public class EmployeeFactoryTest {
 
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getEmployee(){
+    public void getEmployee() {
 
         Employee emp = EmployeeFactory.getEmployee("AJ", "Wiese", "12 Bratton Way");
         Assert.assertNotNull(emp.getEmployeeId());

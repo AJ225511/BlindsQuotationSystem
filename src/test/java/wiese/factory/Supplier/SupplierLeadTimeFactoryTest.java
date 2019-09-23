@@ -8,11 +8,12 @@ import wiese.factories.Supplier.SupplierLeadTimeFactory;
 
 public class SupplierLeadTimeFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getSupplierLeadTime(){
+    public void getSupplierLeadTime() {
 
         SupplierLeadTime slt = SupplierLeadTimeFactory.getSupplierLeadTime();
         Assert.assertNotNull(slt.getLeadTimeId());

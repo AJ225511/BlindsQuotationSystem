@@ -15,12 +15,12 @@ public class QuotationServiceImpl implements QuotationService {
     private QuotationRepository repository;
     private Integer id;
 
-    public QuotationServiceImpl(){
+    public QuotationServiceImpl() {
         repository = QuotationRepositoryImpl.getRepository();
     }
 
-    public QuotationService getService(){
-        if(service == null) service = new QuotationServiceImpl();
+    public QuotationService getService() {
+        if (service == null) service = new QuotationServiceImpl();
         return service;
     }
 

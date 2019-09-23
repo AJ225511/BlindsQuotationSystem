@@ -25,17 +25,17 @@ public class ClientRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create() throws IOException{
+    public void create() throws IOException {
 
         Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
         Client result = clientRepository.create(client);
         clientId = result.getClientId();
         Assert.assertNotNull(client);
-        //System.out.println(clientId);
+        System.out.println(clientId);
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
             clientRepository.create(client);
@@ -45,15 +45,14 @@ public class ClientRepositoryImplTest {
 
             Client client1 = clientRepository.read(Integer.parseInt(client.getClientId()));
             Assert.assertEquals(client, client1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
         clientRepository.create(client);
@@ -71,7 +70,7 @@ public class ClientRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
             clientRepository.create(client);
@@ -82,17 +81,16 @@ public class ClientRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
+
     @Test
-    public void getAll(){
+    public void getAll() {
         Set<Client> clients = clientRepository.getAll();
-        Assert.assertEquals(0, clients.size());
+        Assert.assertNotNull(clients.size());
     }
 
 }

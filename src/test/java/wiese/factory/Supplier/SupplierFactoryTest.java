@@ -8,11 +8,12 @@ import wiese.factories.Supplier.SupplierFactory;
 
 public class SupplierFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getSupplier(){
+    public void getSupplier() {
 
         Supplier sup = SupplierFactory.getSupplier("Taylor Blinds", "12 Bratton Way");
         Assert.assertNotNull(sup.getSupplierId());

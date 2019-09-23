@@ -5,7 +5,7 @@ import wiese.util.Misc;
 
 public class OrderFactory {
 
-    public static Order getOrder(String orderDate, String orderItems){
+    public static Order getOrder(String orderDate, String orderItems) {
         return new Order.Builder()
                 .orderDate(orderDate)
                 .orderItems(orderItems)

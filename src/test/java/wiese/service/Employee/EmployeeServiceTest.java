@@ -18,7 +18,7 @@ public class EmployeeServiceTest {
     private EmployeeServiceImpl employeeService;
 
     @Test
-    public void create(){
+    public void create() {
         Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "4 Bratton Way");
         employeeService.create(employee);
 
@@ -27,15 +27,14 @@ public class EmployeeServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "4 Bratton Way");
             employeeService.create(employee);
 
             Employee employee1 = employeeService.read(Integer.parseInt(employee.getEmployeeId()));
             assertEquals(employee, employee1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class EmployeeServiceTest {
             Employee employee1 = EmployeeFactory.getEmployee("JJ", "Wiese", "9 Bratton Way");
             employee1.setEmployeeId(employee.getEmployeeId());
             employeeService.update(employee1);
-            System.out.println("Original: \n"+employee.getFirstName());
-            System.out.println("Updated: \n"+employee1.getFirstName());
+            System.out.println("Original: \n" + employee.getFirstName());
+            System.out.println("Updated: \n" + employee1.getFirstName());
 
             Employee employee2 = employeeService.read(Integer.parseInt(employee1.getEmployeeId()));
             assertEquals(employee1, employee2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Employee employee = EmployeeFactory.getEmployee("Erik", "Wiese", "11 Bratton Way");
             employeeService.create(employee);
@@ -69,7 +68,7 @@ public class EmployeeServiceTest {
             assertNotNull(employeeService.getAll());
             Employee employee1 = employeeService.read(Integer.parseInt(employee.getEmployeeId()));
             assertNull(employee1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

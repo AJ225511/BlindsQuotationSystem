@@ -23,7 +23,7 @@ public class OrderRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Order order = OrderFactory.getOrder("10 April 2019", "3x blinds");
         orderRepository.create(order);
@@ -32,7 +32,7 @@ public class OrderRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Order order = OrderFactory.getOrder("10 April 2019", "3x blinds");
             orderRepository.create(order);
@@ -42,15 +42,14 @@ public class OrderRepositoryImplTest {
 
             Order order1 = orderRepository.read(Integer.parseInt(order.getOrderId()));
             Assert.assertEquals(order, order1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Order order = OrderFactory.getOrder("10 April 2019", "3x blinds");
         orderRepository.create(order);
@@ -68,7 +67,7 @@ public class OrderRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Order order = OrderFactory.getOrder("10 April 2019", "3x blinds");
             orderRepository.create(order);
@@ -79,9 +78,7 @@ public class OrderRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

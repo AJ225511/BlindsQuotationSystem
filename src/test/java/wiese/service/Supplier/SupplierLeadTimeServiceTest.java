@@ -18,7 +18,7 @@ public class SupplierLeadTimeServiceTest {
     private SupplierLeadTimeServiceImpl supplierLeadTimeService;
 
     @Test
-    public void create(){
+    public void create() {
         SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
         supplierLeadTimeService.create(supplierLeadTime);
 
@@ -27,15 +27,14 @@ public class SupplierLeadTimeServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
             supplierLeadTimeService.create(supplierLeadTime);
 
             SupplierLeadTime supplierLeadTime1 = supplierLeadTimeService.read(Integer.parseInt(supplierLeadTime.getLeadTimeId()));
             assertEquals(supplierLeadTime, supplierLeadTime1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class SupplierLeadTimeServiceTest {
             SupplierLeadTime supplierLeadTime1 = SupplierLeadTimeFactory.getSupplierLeadTime();
             supplierLeadTime1.setLeadTimeId(supplierLeadTime.getLeadTimeId());
             supplierLeadTimeService.update(supplierLeadTime1);
-            System.out.println("Original: \n"+supplierLeadTime);
-            System.out.println("Updated: \n"+supplierLeadTime1);
+            System.out.println("Original: \n" + supplierLeadTime);
+            System.out.println("Updated: \n" + supplierLeadTime1);
 
             SupplierLeadTime supplierLeadTime2 = supplierLeadTimeService.read(Integer.parseInt(supplierLeadTime1.getLeadTimeId()));
             assertEquals(supplierLeadTime1, supplierLeadTime2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             SupplierLeadTime supplierLeadTime = SupplierLeadTimeFactory.getSupplierLeadTime();
             supplierLeadTimeService.create(supplierLeadTime);
@@ -69,7 +68,7 @@ public class SupplierLeadTimeServiceTest {
             assertNotNull(supplierLeadTimeService.getAll());
             SupplierLeadTime supplierLeadTime1 = supplierLeadTimeService.read(Integer.parseInt(supplierLeadTime.getLeadTimeId()));
             assertNull(supplierLeadTime1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

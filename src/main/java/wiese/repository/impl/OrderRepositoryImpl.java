@@ -13,16 +13,16 @@ public class OrderRepositoryImpl implements OrderRepository {
     private static OrderRepositoryImpl repository = null;
     private Set<Order> orders;
 
-    private OrderRepositoryImpl(){
+    private OrderRepositoryImpl() {
         this.orders = new HashSet<>();
     }
 
-    public static OrderRepositoryImpl getRepository(){
-        if(repository == null) repository = new OrderRepositoryImpl();
+    public static OrderRepositoryImpl getRepository() {
+        if (repository == null) repository = new OrderRepositoryImpl();
         return repository;
     }
 
-    public Order find(String id){
+    public Order find(String id) {
         return orders.stream().filter(order -> order.getOrderId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Override
     public Order update(Order order) {
         Order order1 = find(order.getOrderId());
-        if(orders.contains(order1)){
+        if (orders.contains(order1)) {
             orders.remove(order1);
             orders.add(order);
         }
@@ -58,10 +58,9 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Override
     public Order read(Integer id) {
         Order order = find(Integer.toString(id));
-        if(order == null){
+        if (order == null) {
             return null;
-        }
-        else{
+        } else {
             return order;
         }
     }

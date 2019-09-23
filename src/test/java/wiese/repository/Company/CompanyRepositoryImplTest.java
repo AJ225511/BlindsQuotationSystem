@@ -22,7 +22,7 @@ public class CompanyRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Company company = CompanyFactory.getCompany("AJ's Steakhouse", "West Beach");
         companyRepository.create(company);
@@ -31,7 +31,7 @@ public class CompanyRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Company company = CompanyFactory.getCompany("AJ's Steakhouse", "West Beach");
             companyRepository.create(company);
@@ -41,15 +41,14 @@ public class CompanyRepositoryImplTest {
 
             Company company1 = companyRepository.read(Integer.parseInt(company.getCompanyId()));
             Assert.assertEquals(company, company1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Company company = CompanyFactory.getCompany("AJ's Steakhouse", "West Beach");
         companyRepository.create(company);
@@ -67,7 +66,7 @@ public class CompanyRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Company company = CompanyFactory.getCompany("AJ's Steakhouse", "West Beach");
             companyRepository.create(company);
@@ -78,9 +77,7 @@ public class CompanyRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

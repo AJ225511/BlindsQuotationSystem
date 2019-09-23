@@ -15,12 +15,12 @@ public class OrderServiceImpl implements OrderService {
     private OrderRepository repository;
     private Integer id;
 
-    public OrderServiceImpl(){
+    public OrderServiceImpl() {
         repository = OrderRepositoryImpl.getRepository();
     }
 
-    public OrderService getService(){
-        if(service == null) service = new OrderServiceImpl();
+    public OrderService getService() {
+        if (service == null) service = new OrderServiceImpl();
         return service;
     }
 

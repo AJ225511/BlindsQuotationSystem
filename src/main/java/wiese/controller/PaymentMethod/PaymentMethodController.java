@@ -17,30 +17,30 @@ public class PaymentMethodController {
     private PaymentMethodServiceImpl paymentMethodService;
 
     @PostMapping("/create")
-    public PaymentMethod create(@RequestBody PaymentMethod paymentMethod){
+    public PaymentMethod create(@RequestBody PaymentMethod paymentMethod) {
         return paymentMethodService.create(paymentMethod);
     }
 
     @PostMapping("/update")
-    public PaymentMethod paymentMethod(@RequestBody PaymentMethod paymentMethod){
+    public PaymentMethod paymentMethod(@RequestBody PaymentMethod paymentMethod) {
         return paymentMethodService.update(paymentMethod);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         paymentMethodService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public PaymentMethod read(@PathVariable int id){
+    public PaymentMethod read(@PathVariable int id) {
         return paymentMethodService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<PaymentMethod> getAll(){
+    public Set<PaymentMethod> getAll() {
         return paymentMethodService.getAll();
     }
 

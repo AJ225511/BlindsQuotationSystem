@@ -10,17 +10,17 @@ import java.util.Set;
 
 @Service("SupplierServiceImpl")
 public class SupplierServiceImpl implements SupplierService {
-    
+
     private SupplierServiceImpl service = null;
     private SupplierRepository repository;
     private Integer id;
 
-    public SupplierServiceImpl(){
+    public SupplierServiceImpl() {
         repository = SupplierRepositoryImpl.getRepository();
     }
 
-    public SupplierService getService(){
-        if(service == null) service = new SupplierServiceImpl();
+    public SupplierService getService() {
+        if (service == null) service = new SupplierServiceImpl();
         return service;
     }
 

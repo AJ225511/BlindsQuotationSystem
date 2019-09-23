@@ -17,30 +17,30 @@ public class InvoiceController {
     private InvoiceServiceImpl invoiceService;
 
     @PostMapping("/create")
-    public Invoice create(@RequestBody Invoice invoice){
+    public Invoice create(@RequestBody Invoice invoice) {
         return invoiceService.create(invoice);
     }
 
     @PostMapping("/update")
-    public Invoice invoice(@RequestBody Invoice invoice){
+    public Invoice invoice(@RequestBody Invoice invoice) {
         return invoiceService.update(invoice);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         invoiceService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Invoice read(@PathVariable int id){
+    public Invoice read(@PathVariable int id) {
         return invoiceService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Invoice> getAll(){
+    public Set<Invoice> getAll() {
         return invoiceService.getAll();
     }
 

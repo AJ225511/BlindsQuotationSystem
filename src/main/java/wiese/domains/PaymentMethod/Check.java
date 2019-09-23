@@ -6,23 +6,24 @@ public class Check extends PaymentMethod {
 
     private String checkId;
 
-    public Check(){}
-
-    public Check(Builder builder){
-        super(builder);
-        this.checkId=builder.checkId;
+    public Check() {
     }
 
-    public String getCheckId(){
+    public Check(Builder builder) {
+        super(builder);
+        this.checkId = builder.checkId;
+    }
+
+    public String getCheckId() {
         return checkId;
     }
 
-    public static class Builder extends PaymentMethod.Builder{
+    public static class Builder extends PaymentMethod.Builder {
 
         private String checkId;
 
-        public Builder checkId(String checkId){
-            this.checkId=checkId;
+        public Builder checkId(String checkId) {
+            this.checkId = checkId;
             return this;
         }
 
@@ -35,19 +36,20 @@ public class Check extends PaymentMethod {
     @Override
     public String toString() {
         return "Check{" +
-                "checkId='" +checkId + '\'' +
+                "checkId='" + checkId + '\'' +
                 '}';
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Check check = (Check) o;
         return checkId.equals(check.checkId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(checkId);
     }
 }

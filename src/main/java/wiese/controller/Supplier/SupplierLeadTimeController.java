@@ -17,30 +17,30 @@ public class SupplierLeadTimeController {
     private SupplierLeadTimeServiceImpl supplierLeadTimeService;
 
     @PostMapping("/create")
-    public SupplierLeadTime create(@RequestBody SupplierLeadTime supplierLeadTime){
+    public SupplierLeadTime create(@RequestBody SupplierLeadTime supplierLeadTime) {
         return supplierLeadTimeService.create(supplierLeadTime);
     }
 
     @PostMapping("/update")
-    public SupplierLeadTime supplierLeadTime(@RequestBody SupplierLeadTime supplierLeadTime){
+    public SupplierLeadTime supplierLeadTime(@RequestBody SupplierLeadTime supplierLeadTime) {
         return supplierLeadTimeService.update(supplierLeadTime);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         supplierLeadTimeService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public SupplierLeadTime read(@PathVariable int id){
+    public SupplierLeadTime read(@PathVariable int id) {
         return supplierLeadTimeService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<SupplierLeadTime> getAll(){
+    public Set<SupplierLeadTime> getAll() {
         return supplierLeadTimeService.getAll();
     }
 

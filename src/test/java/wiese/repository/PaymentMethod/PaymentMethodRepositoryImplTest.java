@@ -23,7 +23,7 @@ public class PaymentMethodRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(100, "14 April 2019");
         paymentMethodRepository.create(paymentMethod);
@@ -32,7 +32,7 @@ public class PaymentMethodRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(100, "14 April 2019");
             paymentMethodRepository.create(paymentMethod);
@@ -42,15 +42,14 @@ public class PaymentMethodRepositoryImplTest {
 
             PaymentMethod paymentMethod1 = paymentMethodRepository.read(Integer.parseInt(paymentMethod.getPaymentId()));
             Assert.assertEquals(paymentMethod, paymentMethod1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(100, "14 April 2019");
         paymentMethodRepository.create(paymentMethod);
@@ -68,7 +67,7 @@ public class PaymentMethodRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             PaymentMethod paymentMethod = PaymentMethodFactory.getPaymentMethod(100, "14 April 2019");
             paymentMethodRepository.create(paymentMethod);
@@ -79,9 +78,7 @@ public class PaymentMethodRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

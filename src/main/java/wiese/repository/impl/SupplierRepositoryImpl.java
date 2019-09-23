@@ -13,16 +13,16 @@ public class SupplierRepositoryImpl implements SupplierRepository {
     private static SupplierRepositoryImpl repository = null;
     private Set<Supplier> suppliers;
 
-    private SupplierRepositoryImpl(){
+    private SupplierRepositoryImpl() {
         this.suppliers = new HashSet<>();
     }
 
-    public static SupplierRepositoryImpl getRepository(){
-        if(repository == null) repository = new SupplierRepositoryImpl();
+    public static SupplierRepositoryImpl getRepository() {
+        if (repository == null) repository = new SupplierRepositoryImpl();
         return repository;
     }
 
-    public Supplier find(String id){
+    public Supplier find(String id) {
         return suppliers.stream().filter(supplier -> supplier.getSupplierId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class SupplierRepositoryImpl implements SupplierRepository {
     @Override
     public Supplier update(Supplier supplier) {
         Supplier supplier1 = find(supplier.getSupplierId());
-        if(suppliers.contains(supplier1)){
+        if (suppliers.contains(supplier1)) {
             suppliers.remove(supplier1);
             suppliers.add(supplier);
         }
@@ -58,10 +58,9 @@ public class SupplierRepositoryImpl implements SupplierRepository {
     @Override
     public Supplier read(Integer id) {
         Supplier supplier = find(Integer.toString(id));
-        if(supplier == null){
+        if (supplier == null) {
             return null;
-        }
-        else{
+        } else {
             return supplier;
         }
     }

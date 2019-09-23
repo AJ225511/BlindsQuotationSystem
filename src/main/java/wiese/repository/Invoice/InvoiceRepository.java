@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface InvoiceRepository extends Repository <Invoice, Integer> {
+public interface InvoiceRepository extends Repository<Invoice, Integer> {
     Set<Invoice> getAll();
 }

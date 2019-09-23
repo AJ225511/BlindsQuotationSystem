@@ -22,7 +22,7 @@ public class EmployeeControllerTest {
     private String baseURL = "http://localhost:8080/employee";
 
     @Test
-    public void create(){
+    public void create() {
         Employee employee = EmployeeFactory.getEmployee("AJ", "Wiese", "13 Wood Drive");
         employee.setEmployeeId(employee.getEmployeeId());
 
@@ -33,39 +33,38 @@ public class EmployeeControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Employee employee = restTemplate.getForObject(baseURL + "/employee/1", Employee.class);
         assertNotNull(employee);
         System.out.println(employee.getEmployeeId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Employee employee = restTemplate.getForObject(baseURL = "/employee/"+id, Employee.class);
+        Employee employee = restTemplate.getForObject(baseURL = "/employee/" + id, Employee.class);
 
         restTemplate.put(baseURL + "/employee/" + id, Employee.class);
-        Employee updatedEmployee = restTemplate.getForObject(baseURL + "/employee/" +id, Employee.class);
+        Employee updatedEmployee = restTemplate.getForObject(baseURL + "/employee/" + id, Employee.class);
         assertNotNull(updatedEmployee);
         System.out.println(updatedEmployee);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Employee employee = restTemplate.getForObject(baseURL = "/employee/"+id, Employee.class);
+        Employee employee = restTemplate.getForObject(baseURL = "/employee/" + id, Employee.class);
         assertNotNull(employee);
         restTemplate.put(baseURL + "/employee/" + id, Employee.class);
-        try{
-            employee = restTemplate.getForObject(baseURL + "/employee/" +id, Employee.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            employee = restTemplate.getForObject(baseURL + "/employee/" + id, Employee.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllEmployees(){
+    public void testGetAllEmployees() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

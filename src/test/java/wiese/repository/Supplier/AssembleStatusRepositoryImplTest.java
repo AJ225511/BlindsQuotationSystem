@@ -26,14 +26,14 @@ public class AssembleStatusRepositoryImplTest {
     private String assembleId = null;
 
     @Test
-    public void create(){
+    public void create() {
         AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
         assembleStatusRepository.create(assembleStatus);
         Assert.assertNotNull(assembleStatusRepository.getAll());
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
             assembleStatusRepository.create(assembleStatus);
@@ -42,14 +42,13 @@ public class AssembleStatusRepositoryImplTest {
 
             AssembleStatus assembleStatus1 = assembleStatusRepository.read(Integer.parseInt(assembleStatus.getAssembleStatusId()));
             System.out.println(assembleStatus1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
 
     @Test
-    public void update(){
+    public void update() {
         AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
         assembleStatusRepository.create(assembleStatus);
 
@@ -61,12 +60,12 @@ public class AssembleStatusRepositoryImplTest {
         System.out.println(assembleStatus2);
 
         AssembleStatus assembleStatus3 = assembleStatusRepository.find(assembleStatus2.getAssembleStatusId());
-        Assert.assertEquals(assembleStatus2,assembleStatus3);
+        Assert.assertEquals(assembleStatus2, assembleStatus3);
         System.out.println(assembleStatus3);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
             assembleStatusRepository.create(assembleStatus);
@@ -75,15 +74,13 @@ public class AssembleStatusRepositoryImplTest {
             assembleStatusRepository.delete(Integer.parseInt(assembleStatus.getAssembleStatusId()));
             AssembleStatus deleted = assembleStatusRepository.find(assembleStatus.getAssembleStatusId());
             Assert.assertNull(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
 
     @Test
-    public void getAll(){
+    public void getAll() {
         Set<AssembleStatus> assembleStatus = assembleStatusRepository.getAll();
         Assert.assertEquals(4, assembleStatus.size());
     }

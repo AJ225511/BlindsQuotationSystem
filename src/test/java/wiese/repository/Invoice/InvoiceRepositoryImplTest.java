@@ -22,7 +22,7 @@ public class InvoiceRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Invoice invoice = InvoiceFactory.getInvoice("12 April", "2x Blinds");
         invoiceRepository.create(invoice);
@@ -31,7 +31,7 @@ public class InvoiceRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Invoice invoice = InvoiceFactory.getInvoice("12 April", "2x Blinds");
             invoiceRepository.create(invoice);
@@ -41,15 +41,14 @@ public class InvoiceRepositoryImplTest {
 
             Invoice invoice1 = invoiceRepository.read(Integer.parseInt(invoice.getInvoiceId()));
             Assert.assertEquals(invoice, invoice1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Invoice invoice = InvoiceFactory.getInvoice("12 April", "2x Blinds");
         invoiceRepository.create(invoice);
@@ -67,7 +66,7 @@ public class InvoiceRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Invoice invoice = InvoiceFactory.getInvoice("12 April", "2x Blinds");
             invoiceRepository.create(invoice);
@@ -78,9 +77,7 @@ public class InvoiceRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

@@ -18,7 +18,7 @@ public class ProductServiceTest {
     private ProductServiceImpl productService;
 
     @Test
-    public void create(){
+    public void create() {
         Product product = ProductFactory.getProduct("Wooden Blinds");
         productService.create(product);
 
@@ -27,15 +27,14 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Product product = ProductFactory.getProduct("Iron Blinds");
             productService.create(product);
 
             Product product1 = productService.read(Integer.parseInt(product.getProductId()));
             assertEquals(product, product1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class ProductServiceTest {
             Product product1 = ProductFactory.getProduct("Venetian Blinds");
             product1.setProductId(product.getProductId());
             productService.update(product1);
-            System.out.println("Original: \n"+product.getProductName());
-            System.out.println("Updated: \n"+product1.getProductName());
+            System.out.println("Original: \n" + product.getProductName());
+            System.out.println("Updated: \n" + product1.getProductName());
 
             Product product2 = productService.read(Integer.parseInt(product1.getProductId()));
             assertEquals(product1, product2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Product product = ProductFactory.getProduct("Steel shutters");
             productService.create(product);
@@ -69,7 +68,7 @@ public class ProductServiceTest {
             assertNotNull(productService.getAll());
             Product product1 = productService.read(Integer.parseInt(product.getProductId()));
             assertNull(product1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

@@ -8,11 +8,12 @@ import wiese.factories.Quotation.QuotationFactory;
 
 public class QuotationFactoryTest {
     @Before
-    public void setUp() throws Exception{
+    public void setUp() throws Exception {
 
     }
+
     @Test
-    public void getQuotation(){
+    public void getQuotation() {
 
         Quotation quotation = QuotationFactory.getQuotation("12 February 2019");
         Assert.assertNotNull(quotation.getQuotationId());

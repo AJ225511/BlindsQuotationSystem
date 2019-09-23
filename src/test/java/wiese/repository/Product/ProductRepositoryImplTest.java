@@ -23,7 +23,7 @@ public class ProductRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Product product = ProductFactory.getProduct("Venitian Blinds");
         productRepository.create(product);
@@ -32,7 +32,7 @@ public class ProductRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Product product = ProductFactory.getProduct("Venitian Blinds");
             productRepository.create(product);
@@ -42,15 +42,14 @@ public class ProductRepositoryImplTest {
 
             Product product1 = productRepository.read(Integer.parseInt(product.getProductId()));
             Assert.assertEquals(product, product1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Product product = ProductFactory.getProduct("Venitian Blinds");
         productRepository.create(product);
@@ -68,7 +67,7 @@ public class ProductRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Product product = ProductFactory.getProduct("Venitian Blinds");
             productRepository.create(product);
@@ -79,9 +78,7 @@ public class ProductRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

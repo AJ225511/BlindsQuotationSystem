@@ -15,12 +15,12 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
     private PaymentMethodRepository repository;
     private Integer id;
 
-    public PaymentMethodServiceImpl(){
+    public PaymentMethodServiceImpl() {
         repository = PaymentMethodRepositoryImpl.getRepository();
     }
 
-    public PaymentMethodService getService(){
-        if(service == null) service = new PaymentMethodServiceImpl();
+    public PaymentMethodService getService() {
+        if (service == null) service = new PaymentMethodServiceImpl();
         return service;
     }
 

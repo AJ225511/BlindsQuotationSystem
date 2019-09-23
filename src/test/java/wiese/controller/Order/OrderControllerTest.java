@@ -22,7 +22,7 @@ public class OrderControllerTest {
     private String baseURL = "http://localhost:8080/order";
 
     @Test
-    public void create(){
+    public void create() {
         Order order = OrderFactory.getOrder("11 June 2019", "4x Venetian Blinds");
         order.setOrderId(order.getOrderId());
 
@@ -33,39 +33,38 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Order order = restTemplate.getForObject(baseURL + "/order/1", Order.class);
         assertNotNull(order);
         System.out.println(order.getOrderId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Order order = restTemplate.getForObject(baseURL = "/order/"+id, Order.class);
+        Order order = restTemplate.getForObject(baseURL = "/order/" + id, Order.class);
 
         restTemplate.put(baseURL + "/order/" + id, Order.class);
-        Order updatedOrder = restTemplate.getForObject(baseURL + "/order/" +id, Order.class);
+        Order updatedOrder = restTemplate.getForObject(baseURL + "/order/" + id, Order.class);
         assertNotNull(updatedOrder);
         System.out.println(updatedOrder);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Order order = restTemplate.getForObject(baseURL = "/order/"+id, Order.class);
+        Order order = restTemplate.getForObject(baseURL = "/order/" + id, Order.class);
         assertNotNull(order);
         restTemplate.put(baseURL + "/order/" + id, Order.class);
-        try{
-            order = restTemplate.getForObject(baseURL + "/order/" +id, Order.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            order = restTemplate.getForObject(baseURL + "/order/" + id, Order.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllOrders(){
+    public void testGetAllOrders() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

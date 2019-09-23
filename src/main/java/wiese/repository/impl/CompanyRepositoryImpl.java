@@ -8,21 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Repository("CompanyInMemory")
-public class CompanyRepositoryImpl implements CompanyRepository{
+public class CompanyRepositoryImpl implements CompanyRepository {
 
     private static CompanyRepositoryImpl repository = null;
     private Set<Company> companies;
 
-    private CompanyRepositoryImpl(){
+    private CompanyRepositoryImpl() {
         this.companies = new HashSet<>();
     }
 
-    public static CompanyRepositoryImpl getRepository(){
-        if(repository == null) repository = new CompanyRepositoryImpl();
+    public static CompanyRepositoryImpl getRepository() {
+        if (repository == null) repository = new CompanyRepositoryImpl();
         return repository;
     }
 
-    public Company find(String id){
+    public Company find(String id) {
         return companies.stream().filter(company -> company.getCompanyId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class CompanyRepositoryImpl implements CompanyRepository{
     @Override
     public Company update(Company company) {
         Company company1 = find(company.getCompanyId());
-        if(companies.contains(company1)){
+        if (companies.contains(company1)) {
             companies.remove(company1);
             companies.add(company);
         }
@@ -58,10 +58,9 @@ public class CompanyRepositoryImpl implements CompanyRepository{
     @Override
     public Company read(Integer id) {
         Company company = find(Integer.toString(id));
-        if(company == null){
+        if (company == null) {
             return null;
-        }
-        else{
+        } else {
             return company;
         }
     }

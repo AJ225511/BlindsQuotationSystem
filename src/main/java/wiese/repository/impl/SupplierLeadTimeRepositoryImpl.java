@@ -13,16 +13,16 @@ public class SupplierLeadTimeRepositoryImpl implements SupplierLeadTimeRepositor
     private static SupplierLeadTimeRepositoryImpl repository = null;
     private Set<SupplierLeadTime> supplierLeadTimes;
 
-    private SupplierLeadTimeRepositoryImpl(){
+    private SupplierLeadTimeRepositoryImpl() {
         this.supplierLeadTimes = new HashSet<>();
     }
 
-    public static SupplierLeadTimeRepositoryImpl getRepository(){
-        if(repository == null) repository = new SupplierLeadTimeRepositoryImpl();
+    public static SupplierLeadTimeRepositoryImpl getRepository() {
+        if (repository == null) repository = new SupplierLeadTimeRepositoryImpl();
         return repository;
     }
 
-    public SupplierLeadTime find(String id){
+    public SupplierLeadTime find(String id) {
         return supplierLeadTimes.stream().filter(supplierLeadTime -> supplierLeadTime.getLeadTimeId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class SupplierLeadTimeRepositoryImpl implements SupplierLeadTimeRepositor
     @Override
     public SupplierLeadTime update(SupplierLeadTime supplierLeadTime) {
         SupplierLeadTime supplierLeadTime1 = find(supplierLeadTime.getLeadTimeId());
-        if(supplierLeadTimes.contains(supplierLeadTime1)){
+        if (supplierLeadTimes.contains(supplierLeadTime1)) {
             supplierLeadTimes.remove(supplierLeadTime1);
             supplierLeadTimes.add(supplierLeadTime);
         }
@@ -58,10 +58,9 @@ public class SupplierLeadTimeRepositoryImpl implements SupplierLeadTimeRepositor
     @Override
     public SupplierLeadTime read(Integer id) {
         SupplierLeadTime supplierLeadTime = find(Integer.toString(id));
-        if(supplierLeadTime == null){
+        if (supplierLeadTime == null) {
             return null;
-        }
-        else{
+        } else {
             return supplierLeadTime;
         }
     }

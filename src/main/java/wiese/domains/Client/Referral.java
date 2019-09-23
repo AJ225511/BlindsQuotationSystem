@@ -6,23 +6,24 @@ public class Referral extends Lead {
 
     private String referralId;
 
-    public Referral(){}
-
-    public Referral(Builder builder){
-        super(builder);
-        this.referralId=builder.referralId;
+    public Referral() {
     }
 
-    public String getReferralId(){
+    public Referral(Builder builder) {
+        super(builder);
+        this.referralId = builder.referralId;
+    }
+
+    public String getReferralId() {
         return referralId;
     }
 
-    public static class Builder extends Lead.Builder{
+    public static class Builder extends Lead.Builder {
 
         private String referralId;
 
-        public Builder referralId(String referralId){
-            this.referralId=referralId;
+        public Builder referralId(String referralId) {
+            this.referralId = referralId;
             return this;
         }
 
@@ -38,16 +39,17 @@ public class Referral extends Lead {
                 "referralId='" + referralId + '\'' +
                 '}';
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Referral referral = (Referral) o;
         return referralId.equals(referral.referralId);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(referralId);
     }
 }

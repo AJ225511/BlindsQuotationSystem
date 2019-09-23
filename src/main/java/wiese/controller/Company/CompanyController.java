@@ -1,7 +1,7 @@
 package wiese.controller.Company;
 
 import wiese.domains.Company.Company;
-import wiese.service.impl.CompanyServiceImpl;
+import wiese.service.Company.CompanyService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,33 +14,33 @@ public class CompanyController {
 
     @Autowired
     @Qualifier("CompanyServiceImpl")
-    private CompanyServiceImpl companyService;
+    private CompanyService companyService;
 
     @PostMapping("/create")
-    public Company create(@RequestBody Company company){
+    public Company create(@RequestBody Company company) {
         return companyService.create(company);
     }
 
     @PostMapping("/update")
-    public Company company(@RequestBody Company company){
+    public Company company(@RequestBody Company company) {
         return companyService.update(company);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         companyService.delete(id);
     }
 
-    @GetMapping("/read/{id}")
+    @GetMapping("/find/{id}")
     @ResponseBody
-    public Company read(@PathVariable int id){
+    public Company read(@PathVariable int id) {
         return companyService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Company> getAll(){
+    public Set<Company> getAll() {
         return companyService.getAll();
     }
 

@@ -16,30 +16,30 @@ public class LeadController {
     private LeadServiceImpl leadService;
 
     @PostMapping("/create")
-    public Lead create(@RequestBody Lead lead){
+    public Lead create(@RequestBody Lead lead) {
         return leadService.create(lead);
     }
 
     @PostMapping("/update")
-    public Lead lead(@RequestBody Lead lead){
+    public Lead lead(@RequestBody Lead lead) {
         return leadService.update(lead);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         leadService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Lead read(@PathVariable int id){
+    public Lead read(@PathVariable int id) {
         return leadService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Lead> getAll(){
+    public Set<Lead> getAll() {
         return leadService.getAll();
     }
 

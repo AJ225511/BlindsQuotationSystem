@@ -20,8 +20,8 @@ public class LeadServiceImpl implements LeadService {
         repository = LeadRepositoryImpl.getRepository();
     }
 
-    public LeadService getService(){
-        if(service == null) service = new LeadServiceImpl();
+    public LeadService getService() {
+        if (service == null) service = new LeadServiceImpl();
         return service;
     }
 

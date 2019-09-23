@@ -11,36 +11,36 @@ import java.util.Set;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
-   
+
     @Autowired
     @Qualifier("OrderServiceImpl")
     private OrderServiceImpl orderService;
 
     @PostMapping("/create")
-    public Order create(@RequestBody Order order){
+    public Order create(@RequestBody Order order) {
         return orderService.create(order);
     }
 
     @PostMapping("/update")
-    public Order order(@RequestBody Order order){
+    public Order order(@RequestBody Order order) {
         return orderService.update(order);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         orderService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Order read(@PathVariable int id){
+    public Order read(@PathVariable int id) {
         return orderService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Order> getAll(){
+    public Set<Order> getAll() {
         return orderService.getAll();
     }
 

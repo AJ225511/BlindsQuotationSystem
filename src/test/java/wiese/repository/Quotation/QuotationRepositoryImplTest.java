@@ -23,7 +23,7 @@ public class QuotationRepositoryImplTest {
     private String clientId = null;
 
     @Test
-    public void create(){
+    public void create() {
 
         Quotation quotation = QuotationFactory.getQuotation("11 April 2019");
         quotationRepository.create(quotation);
@@ -32,7 +32,7 @@ public class QuotationRepositoryImplTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             Quotation quotation = QuotationFactory.getQuotation("11 April 2019");
             quotationRepository.create(quotation);
@@ -42,15 +42,14 @@ public class QuotationRepositoryImplTest {
 
             Quotation quotation1 = quotationRepository.read(Integer.parseInt(quotation.getQuotationId()));
             Assert.assertEquals(quotation, quotation1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
     }
 
     @Test
-    public void update(){
+    public void update() {
 
         Quotation quotation = QuotationFactory.getQuotation("11 April 2019");
         quotationRepository.create(quotation);
@@ -68,7 +67,7 @@ public class QuotationRepositoryImplTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         try {
             Quotation quotation = QuotationFactory.getQuotation("11 April 2019");
             quotationRepository.create(quotation);
@@ -79,9 +78,7 @@ public class QuotationRepositoryImplTest {
             Assert.assertNull(deleted);
 
             System.out.println(deleted);
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 

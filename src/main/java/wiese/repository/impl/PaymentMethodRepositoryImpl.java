@@ -12,16 +12,16 @@ public class PaymentMethodRepositoryImpl implements PaymentMethodRepository {
     private static PaymentMethodRepositoryImpl repository = null;
     private Set<PaymentMethod> paymentMethods;
 
-    private PaymentMethodRepositoryImpl(){
+    private PaymentMethodRepositoryImpl() {
         this.paymentMethods = new HashSet<>();
     }
 
-    public static PaymentMethodRepositoryImpl getRepository(){
-        if(repository == null) repository = new PaymentMethodRepositoryImpl();
+    public static PaymentMethodRepositoryImpl getRepository() {
+        if (repository == null) repository = new PaymentMethodRepositoryImpl();
         return repository;
     }
 
-    public PaymentMethod find(String id){
+    public PaymentMethod find(String id) {
         return paymentMethods.stream().filter(paymentMethod -> paymentMethod.getPaymentId() == id).findAny().orElse(null);
     }
 
@@ -39,7 +39,7 @@ public class PaymentMethodRepositoryImpl implements PaymentMethodRepository {
     @Override
     public PaymentMethod update(PaymentMethod paymentMethod) {
         PaymentMethod paymentMethod1 = find(paymentMethod.getPaymentId());
-        if(paymentMethods.contains(paymentMethod1)){
+        if (paymentMethods.contains(paymentMethod1)) {
             paymentMethods.remove(paymentMethod1);
             paymentMethods.add(paymentMethod);
         }
@@ -57,10 +57,9 @@ public class PaymentMethodRepositoryImpl implements PaymentMethodRepository {
     @Override
     public PaymentMethod read(Integer id) {
         PaymentMethod paymentMethod = find(Integer.toString(id));
-        if(paymentMethod == null){
+        if (paymentMethod == null) {
             return null;
-        }
-        else{
+        } else {
             return paymentMethod;
         }
     }

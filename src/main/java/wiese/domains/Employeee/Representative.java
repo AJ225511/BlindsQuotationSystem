@@ -6,35 +6,37 @@ public class Representative extends Employee {
 
     private String representativeId;
 
-    public Representative(){}
-
-    public Representative(Builder builder){
-        super(builder);
-        this.representativeId= builder.representativeId;
+    public Representative() {
     }
 
-    public String getRepresentativeId(){
+    public Representative(Builder builder) {
+        super(builder);
+        this.representativeId = builder.representativeId;
+    }
+
+    public String getRepresentativeId() {
         return representativeId;
     }
 
-    public void setRepresentativeId(String representativeId){
-        this.representativeId=representativeId;
+    public void setRepresentativeId(String representativeId) {
+        this.representativeId = representativeId;
     }
 
-    public static class Builder extends Employee.Builder{
+    public static class Builder extends Employee.Builder {
 
         private String representativeId;
 
-        public Builder(){
+        public Builder() {
             super();
         }
 
-        public Builder representativeId(String representativeId){
-            this.representativeId=representativeId;
+        public Builder representativeId(String representativeId) {
+            this.representativeId = representativeId;
             return this;
         }
+
         @Override
-        public Employee build(){
+        public Employee build() {
             return new Representative(this);
         }
 
@@ -46,15 +48,15 @@ public class Representative extends Employee {
         }
 
         @Override
-        public boolean equals(Object o){
-            if(this == o) return true;
-            if(o == null || getClass() != o.getClass()) return false;
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
             Representative representative = (Representative) o;
             return representativeId.equals(representative.representativeId);
         }
 
         @Override
-        public int hashCode(){
+        public int hashCode() {
             return Objects.hash(representativeId);
         }
     }

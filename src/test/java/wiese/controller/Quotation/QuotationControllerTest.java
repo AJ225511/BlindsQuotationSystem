@@ -22,7 +22,7 @@ public class QuotationControllerTest {
     private String baseURL = "http://localhost:8080/quotation";
 
     @Test
-    public void create(){
+    public void create() {
         Quotation quotation = QuotationFactory.getQuotation("11 June 2019");
         quotation.setQuotationId(quotation.getQuotationId());
 
@@ -33,39 +33,38 @@ public class QuotationControllerTest {
     }
 
     @Test
-    public void findId(){
+    public void findId() {
         Quotation quotation = restTemplate.getForObject(baseURL + "/quotation/1", Quotation.class);
         assertNotNull(quotation);
         System.out.println(quotation.getQuotationId());
     }
 
     @Test
-    public void update(){
+    public void update() {
         int id = 1;
-        Quotation quotation = restTemplate.getForObject(baseURL = "/quotation/"+id, Quotation.class);
+        Quotation quotation = restTemplate.getForObject(baseURL = "/quotation/" + id, Quotation.class);
 
         restTemplate.put(baseURL + "/quotation/" + id, Quotation.class);
-        Quotation updatedQuotation = restTemplate.getForObject(baseURL + "/quotation/" +id, Quotation.class);
+        Quotation updatedQuotation = restTemplate.getForObject(baseURL + "/quotation/" + id, Quotation.class);
         assertNotNull(updatedQuotation);
         System.out.println(updatedQuotation);
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         int id = 2;
-        Quotation quotation = restTemplate.getForObject(baseURL = "/quotation/"+id, Quotation.class);
+        Quotation quotation = restTemplate.getForObject(baseURL = "/quotation/" + id, Quotation.class);
         assertNotNull(quotation);
         restTemplate.put(baseURL + "/quotation/" + id, Quotation.class);
-        try{
-            quotation = restTemplate.getForObject(baseURL + "/quotation/" +id, Quotation.class);
-        }
-        catch (final HttpClientErrorException e){
+        try {
+            quotation = restTemplate.getForObject(baseURL + "/quotation/" + id, Quotation.class);
+        } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
     }
 
     @Test
-    public void testGetAllQuotations(){
+    public void testGetAllQuotations() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

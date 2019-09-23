@@ -9,18 +9,18 @@ import wiese.service.Product.ProductService;
 import java.util.Set;
 
 @Service("ProductServiceImpl")
-public class ProductServiceImpl implements  ProductService{
+public class ProductServiceImpl implements ProductService {
 
     private ProductServiceImpl service = null;
     private ProductRepository repository;
     private Integer id;
 
-    public ProductServiceImpl(){
+    public ProductServiceImpl() {
         repository = ProductRepositoryImpl.getRepository();
     }
 
-    public ProductService getService(){
-        if(service == null) service = new ProductServiceImpl();
+    public ProductService getService() {
+        if (service == null) service = new ProductServiceImpl();
         return service;
     }
 

@@ -18,7 +18,7 @@ public class AssembleStatusServiceTest {
     private AssembleStatusServiceImpl assembleStatusService;
 
     @Test
-    public void create(){
+    public void create() {
         AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
         assembleStatusService.create(assembleStatus);
 
@@ -27,15 +27,14 @@ public class AssembleStatusServiceTest {
     }
 
     @Test
-    public void read(){
+    public void read() {
         try {
             AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
             assembleStatusService.create(assembleStatus);
 
             AssembleStatus assembleStatus1 = assembleStatusService.read(Integer.parseInt(assembleStatus.getAssembleStatusId()));
             assertEquals(assembleStatus, assembleStatus1);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
 
@@ -50,18 +49,18 @@ public class AssembleStatusServiceTest {
             AssembleStatus assembleStatus1 = AssembleStatusFactory.getAssembleStatus();
             assembleStatus1.setAssembleStatusId(assembleStatus.getAssembleStatusId());
             assembleStatusService.update(assembleStatus1);
-            System.out.println("Original: \n"+assembleStatus);
-            System.out.println("Updated: \n"+assembleStatus1);
+            System.out.println("Original: \n" + assembleStatus);
+            System.out.println("Updated: \n" + assembleStatus1);
 
             AssembleStatus assembleStatus2 = assembleStatusService.read(Integer.parseInt(assembleStatus1.getAssembleStatusId()));
             assertEquals(assembleStatus1, assembleStatus2);
-        }
-        catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }
+
     @Test
-    public void delete(){
+    public void delete() {
         try {
             AssembleStatus assembleStatus = AssembleStatusFactory.getAssembleStatus();
             assembleStatusService.create(assembleStatus);
@@ -69,7 +68,7 @@ public class AssembleStatusServiceTest {
             assertNotNull(assembleStatusService.getAll());
             AssembleStatus assembleStatus1 = assembleStatusService.read(Integer.parseInt(assembleStatus.getAssembleStatusId()));
             assertNull(assembleStatus1);
-        }catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println(nfe);
         }
     }

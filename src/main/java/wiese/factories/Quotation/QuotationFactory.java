@@ -5,7 +5,7 @@ import wiese.util.Misc;
 
 public class QuotationFactory {
 
-    public static Quotation getQuotation(String quotationDate){
+    public static Quotation getQuotation(String quotationDate) {
         return new Quotation.Builder()
                 .quotationDate(quotationDate)
                 .quotationId(Misc.generateId())

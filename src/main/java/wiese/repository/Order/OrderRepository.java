@@ -5,6 +5,6 @@ import wiese.repository.Repository;
 
 import java.util.Set;
 
-public interface OrderRepository extends Repository <Order, Integer> {
+public interface OrderRepository extends Repository<Order, Integer> {
     Set<Order> getAll();
 }

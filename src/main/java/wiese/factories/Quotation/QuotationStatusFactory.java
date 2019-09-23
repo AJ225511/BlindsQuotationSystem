@@ -5,8 +5,8 @@ import wiese.util.Misc;
 
 public class QuotationStatusFactory {
 
-    public static QuotationStatus getQuotationStatus(){
-        return(QuotationStatus) new  QuotationStatus.Builder()
+    public static QuotationStatus getQuotationStatus() {
+        return (QuotationStatus) new QuotationStatus.Builder()
                 .quotationStatusId(Misc.generateId())
                 .build();
     }

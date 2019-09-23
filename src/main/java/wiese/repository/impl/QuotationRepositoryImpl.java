@@ -8,21 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Repository("QuotationInMemory")
-public class QuotationRepositoryImpl implements QuotationRepository{
+public class QuotationRepositoryImpl implements QuotationRepository {
 
     private static QuotationRepositoryImpl repository = null;
     private Set<Quotation> quotations;
 
-    private QuotationRepositoryImpl(){
+    private QuotationRepositoryImpl() {
         this.quotations = new HashSet<>();
     }
 
-    public static QuotationRepositoryImpl getRepository(){
-        if(repository == null) repository = new QuotationRepositoryImpl();
+    public static QuotationRepositoryImpl getRepository() {
+        if (repository == null) repository = new QuotationRepositoryImpl();
         return repository;
     }
 
-    public Quotation find(String id){
+    public Quotation find(String id) {
         return quotations.stream().filter(quotation -> quotation.getQuotationId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class QuotationRepositoryImpl implements QuotationRepository{
     @Override
     public Quotation update(Quotation quotation) {
         Quotation quotation1 = find(quotation.getQuotationId());
-        if(quotations.contains(quotation1)){
+        if (quotations.contains(quotation1)) {
             quotations.remove(quotation1);
             quotations.add(quotation);
         }
@@ -58,10 +58,9 @@ public class QuotationRepositoryImpl implements QuotationRepository{
     @Override
     public Quotation read(Integer id) {
         Quotation quotation = find(Integer.toString(id));
-        if(quotation == null){
+        if (quotation == null) {
             return null;
-        }
-        else{
+        } else {
             return quotation;
         }
     }

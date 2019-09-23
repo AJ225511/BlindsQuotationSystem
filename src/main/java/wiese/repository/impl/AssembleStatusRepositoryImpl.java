@@ -8,21 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Repository("AssembleStatusInMemory")
-public class AssembleStatusRepositoryImpl implements AssembleStatusRepository{
+public class AssembleStatusRepositoryImpl implements AssembleStatusRepository {
 
     private static AssembleStatusRepositoryImpl repository = null;
     private Set<AssembleStatus> assembleStatuss;
 
-    private AssembleStatusRepositoryImpl(){
+    private AssembleStatusRepositoryImpl() {
         this.assembleStatuss = new HashSet<>();
     }
 
-    public static AssembleStatusRepositoryImpl getRepository(){
-        if(repository == null) repository = new AssembleStatusRepositoryImpl();
+    public static AssembleStatusRepositoryImpl getRepository() {
+        if (repository == null) repository = new AssembleStatusRepositoryImpl();
         return repository;
     }
 
-    public AssembleStatus find(String id){
+    public AssembleStatus find(String id) {
         return assembleStatuss.stream().filter(assembleStatus -> assembleStatus.getAssembleStatusId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class AssembleStatusRepositoryImpl implements AssembleStatusRepository{
     @Override
     public AssembleStatus update(AssembleStatus assembleStatus) {
         AssembleStatus assembleStatus1 = find(assembleStatus.getAssembleStatusId());
-        if(assembleStatuss.contains(assembleStatus1)){
+        if (assembleStatuss.contains(assembleStatus1)) {
             assembleStatuss.remove(assembleStatus1);
             assembleStatuss.add(assembleStatus);
         }
@@ -58,10 +58,9 @@ public class AssembleStatusRepositoryImpl implements AssembleStatusRepository{
     @Override
     public AssembleStatus read(Integer id) {
         AssembleStatus assembleStatus = find(Integer.toString(id));
-        if(assembleStatus == null){
+        if (assembleStatus == null) {
             return null;
-        }
-        else{
+        } else {
             return assembleStatus;
         }
     }

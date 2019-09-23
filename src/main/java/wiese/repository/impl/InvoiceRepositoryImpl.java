@@ -13,16 +13,16 @@ public class InvoiceRepositoryImpl implements InvoiceRepository {
     private static InvoiceRepositoryImpl repository = null;
     private Set<Invoice> invoices;
 
-    private InvoiceRepositoryImpl(){
+    private InvoiceRepositoryImpl() {
         this.invoices = new HashSet<>();
     }
 
-    public static InvoiceRepositoryImpl getRepository(){
-        if(repository == null) repository = new InvoiceRepositoryImpl();
+    public static InvoiceRepositoryImpl getRepository() {
+        if (repository == null) repository = new InvoiceRepositoryImpl();
         return repository;
     }
 
-    public Invoice find(String id){
+    public Invoice find(String id) {
         return invoices.stream().filter(invoice -> invoice.getInvoiceId() == id).findAny().orElse(null);
     }
 
@@ -40,7 +40,7 @@ public class InvoiceRepositoryImpl implements InvoiceRepository {
     @Override
     public Invoice update(Invoice invoice) {
         Invoice invoice1 = find(invoice.getInvoiceId());
-        if(invoices.contains(invoice1)){
+        if (invoices.contains(invoice1)) {
             invoices.remove(invoice1);
             invoices.add(invoice);
         }
@@ -58,10 +58,9 @@ public class InvoiceRepositoryImpl implements InvoiceRepository {
     @Override
     public Invoice read(Integer id) {
         Invoice invoice = find(Integer.toString(id));
-        if(invoice == null){
+        if (invoice == null) {
             return null;
-        }
-        else{
+        } else {
             return invoice;
         }
     }

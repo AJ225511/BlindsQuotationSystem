@@ -17,30 +17,30 @@ public class QuotationController {
     private QuotationServiceImpl quotationService;
 
     @PostMapping("/create")
-    public Quotation create(@RequestBody Quotation quotation){
+    public Quotation create(@RequestBody Quotation quotation) {
         return quotationService.create(quotation);
     }
 
     @PostMapping("/update")
-    public Quotation quotation(@RequestBody Quotation quotation){
+    public Quotation quotation(@RequestBody Quotation quotation) {
         return quotationService.update(quotation);
     }
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         quotationService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Quotation read(@PathVariable int id){
+    public Quotation read(@PathVariable int id) {
         return quotationService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Quotation> getAll(){
+    public Set<Quotation> getAll() {
         return quotationService.getAll();
     }
 
