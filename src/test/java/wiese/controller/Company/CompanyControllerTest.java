@@ -28,7 +28,7 @@ public class CompanyControllerTest {
         Company company = CompanyFactory.getCompany("AJ's Sushi House", "Bratton way");
         restTemplate.postForEntity(baseURL + "/create", company, Company.class);
     }
-
+/*
     @Test
     public void create() {
         Company company = CompanyFactory.getCompany("AJ's Steakhouse", "21 Bratton Way");
@@ -52,7 +52,7 @@ public class CompanyControllerTest {
     public void update() {
         Company company = CompanyFactory.getCompany("AJ's Fishouse", "Warra way");
         company.setCompanyId("ajwi");
-        ResponseEntity<Company> responseEntity = restTemplate.postForEntity(baseURL + "/create", company, Company.class);
+        ResponseEntity<Company> result = restTemplate.postForEntity(baseURL + "/create", company, Company.class);
 
         Company company1 = restTemplate.getForObject(baseURL + "/find/" + "ajwi", Company.class);
         company1.setCompanyId("jjwi");
@@ -83,26 +83,26 @@ public class CompanyControllerTest {
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
         ResponseEntity<String> response = restTemplate.exchange(baseURL + "/create", HttpMethod.GET, entity, String.class);
         assertNotNull(response.getBody());
+    }*/
+
+    @Test
+    public void createCompany() throws Exception {
+        ResponseEntity<String> result = restTemplate.withBasicAuth("tile", "tile").postForEntity(baseURL + "/create/boom",null, String.class);
+
+        System.out.println(result.getStatusCode());
+        System.out.println(result.getBody());
+
+        assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
     @Test
-    public void correct() throws Exception {
-        ResponseEntity<String> responseEntity = restTemplate.withBasicAuth("tile", "tile").getForEntity(baseURL + "/getall", String.class);
+    public void getAll() throws Exception {
+        ResponseEntity<String> result = restTemplate.withBasicAuth("tile", "notatile").getForEntity(baseURL + "/getall", String.class);
 
-        System.out.println(responseEntity.getStatusCode());
-        System.out.println(responseEntity.getBody());
+        System.out.println(result.getStatusCode());
+        System.out.println(result.getBody());
 
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-    }
-
-    @Test
-    public void incorrect() throws Exception {
-        ResponseEntity<String> responseEntity = restTemplate.withBasicAuth("tile", "notatile").getForEntity(baseURL + "/getall", String.class);
-
-        System.out.println(responseEntity.getStatusCode());
-        System.out.println(responseEntity.getBody());
-
-        assertEquals(HttpStatus.UNAUTHORIZED, responseEntity.getStatusCode());
+        assertEquals(HttpStatus.UNAUTHORIZED, result.getStatusCode());
     }
 
 

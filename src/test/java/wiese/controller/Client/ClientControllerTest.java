@@ -15,13 +15,16 @@ import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ClientControllerTest {
+
+
+    private static final String baseURL = "http://localhost:8080/client";
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private String baseURL = "http://localhost:8080/client";
 
+    /*
     @Test
     public void create() {
         Client client = ClientFactory.getClient("AJ", "West Beach", "ajwiese@gmail.com", 123);
@@ -72,6 +75,24 @@ public class ClientControllerTest {
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
         ResponseEntity<String> response = restTemplate.exchange(baseURL + "/getAll", HttpMethod.GET, entity, String.class);
         assertNotNull(response.getBody());
+    }*/
+
+    @Test
+    public void createClient() throws Exception {
+        ResponseEntity<String> result = restTemplate.withBasicAuth("tile", "tile").postForEntity(baseURL + "/create/boom",null, String.class);
+
+        System.out.println(result.getStatusCode());
+
+        assertEquals(HttpStatus.OK, result.getStatusCode());
+    }
+
+    @Test
+    public void getAll() throws Exception {
+        ResponseEntity<String> result = restTemplate.withBasicAuth("tile", "notatile").getForEntity(baseURL + "/getall", String.class);
+
+        System.out.println(result.getStatusCode());
+
+        assertEquals(HttpStatus.UNAUTHORIZED, result.getStatusCode());
     }
 
 }

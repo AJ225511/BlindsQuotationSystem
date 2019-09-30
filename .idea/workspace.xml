@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2380fcde-79b1-42e7-90e8-c59056b5cc9c" name="Default Changelist" comment="" />
+    <list default="true" id="2380fcde-79b1-42e7-90e8-c59056b5cc9c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,20 +16,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-233">
+            <state relative-caret-position="1450">
+              <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="89" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/LeadControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/factory/Client/ClientFactoryTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="-1081">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -39,6 +133,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>employeeGender</find>
+      <find>responseEntity</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>company</replace>
+      <replace>result</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -48,6 +152,11 @@
         <option value="$PROJECT_DIR$/src/main/java/util/IdGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/Misc.java" />
         <option value="$PROJECT_DIR$/src/main/java/domains/Client/WebRequestFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/repository/Company/impl/CompanyRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" />
       </list>
     </option>
   </component>
@@ -91,7 +200,115 @@
               <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="domains" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="domains" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wiese" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -102,7 +319,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569211504115" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569814907172" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,7 +333,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ClientControllerTest.createClient">
+    <configuration name="BlindsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wiese.BlindsApplication" />
+      <module name="BlindsQuotationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wiese.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BlindsQuotationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wiese.controller.Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wiese.controller.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.controller.Client.ClientControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientControllerTest.createClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BlindsQuotationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wiese.controller.Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wiese.controller.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.controller.Client.ClientControllerTest" />
+      <option name="METHOD_NAME" value="createClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompanyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
@@ -132,9 +393,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompanyControllerTest.correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BlindsQuotationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wiese.controller.Company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wiese.controller.Company" />
+      <option name="MAIN_CLASS_NAME" value="wiese.controller.Company.CompanyControllerTest" />
+      <option name="METHOD_NAME" value="correct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClientControllerTest.createClient" />
+        <item itemvalue="JUnit.ClientControllerTest" />
+        <item itemvalue="Application.BlindsApplication" />
         <item itemvalue="JUnit.CompanyControllerTest" />
+        <item itemvalue="JUnit.CompanyControllerTest.correct" />
       </list>
     </recent_temporary>
   </component>
@@ -149,12 +430,53 @@
       <option name="presentableId" value="Default" />
       <updated>1555442649576</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Security">
+      <created>1569211554244</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569211554244</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 25m 44s.xml">
+      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 27m 07s.xml">
+      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 27m 27s.xml">
+      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest - 2019.09.30 at 05h 29m 16s.xml">
+      <configuration name="CompanyControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest - 2019.09.30 at 05h 29m 51s.xml">
+      <configuration name="CompanyControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 31m 25s.xml">
+      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 32m 45s.xml">
+      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 33m 41s.xml">
+      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 34m 51s.xml">
+      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 38m 06s.xml">
+      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20948827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -163,15 +485,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -182,21 +504,23 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Security" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Employeee/Representative.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Invoice/Invoice.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Order/Order.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/PaymentMethod/PaymentMethod.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/PaymentMethod/CreditCard.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/PaymentMethod/Check.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/PaymentMethod/Cash.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Product/Product.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Quotation/Quotation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Quotation/QuotationStatus.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Quotation/QuotationItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Quotation/QuotationItemStatus.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Supplier/Supplier.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Supplier/SupplierLeadTime.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/factories/Supplier/AssembleStatus.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Lead.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Existing.java" />
@@ -232,17 +556,147 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/SupplierFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/AssembleStatusFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/SupplierLeadTimeFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/wiese/factory/Client/ClientFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/util/Misc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/impl/CompanyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/impl/CompanyRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/LeadControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="89" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
