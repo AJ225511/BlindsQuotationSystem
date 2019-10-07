@@ -1,10 +1,15 @@
 package wiese.domains.Quotation;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class Quotation {
 
+    @Id
     private String quotationId, quotationDate;
+    @OneToMany()
+    private String desc;
 
     public Quotation() {
     }
@@ -12,23 +17,29 @@ public class Quotation {
     public Quotation(Builder builder) {
         this.quotationId = builder.quotationId;
         this.quotationDate = builder.quotationDate;
+        this.desc = builder.desc;
     }
 
     public String getQuotationId() {
         return quotationId;
     }
 
-    public String getQuotationDate() {
-        return quotationDate;
+    public String getDesc(){
+        return desc;
     }
 
-    public void setQuotationId(String quotationId) {
-        this.quotationId = quotationId;
+    @Override
+    public String toString() {
+        return "Quotation{" +
+                "quotationId='" + quotationId + '\'' +
+                "quotationDate='" + quotationDate + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String quotationId, quotationDate;
+        private String quotationId,quotationDate, desc;
 
         public Builder quotationId(String quotationId) {
             this.quotationId = quotationId;
@@ -40,30 +51,19 @@ public class Quotation {
             return this;
         }
 
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(Quotation quotation){
+            this.quotationId = quotation.quotationId;
+            this.desc = quotation.desc;
+            return this;
+        }
+
         public Quotation build() {
             return new Quotation(this);
-        }
-
-
-        @Override
-        public String toString() {
-            return "Quotation{" +
-                    "quotationId='" + quotationId + '\'' +
-                    ", quotationDate='" + quotationDate + '\'' +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Quotation quotation = (Quotation) o;
-            return quotationId.equals(quotation.quotationId);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(quotationId);
         }
     }
 

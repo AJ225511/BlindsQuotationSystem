@@ -1,13 +1,21 @@
 package wiese.service.Client;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import org.junit.Assert;
+import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 import wiese.domains.Client.Client;
 import wiese.factories.Client.ClientFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import wiese.repository.Client.ClientRepository;
 import wiese.service.impl.ClientServiceImpl;
+
+import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -16,61 +24,50 @@ import static org.junit.Assert.*;
 public class ClientServiceTest {
 
     @Autowired
-    private ClientServiceImpl clientService;
+    private ClientService clientService;
 
     @Test
     public void create() {
-        Client client = ClientFactory.getClient("AJ", "13 Bratton way", "ajwiese@gmail.com", 1234);
+
+        Client client = ClientFactory.getClient("Aj", "13 Bratton Way", "ajwiese@gnail.com");
         clientService.create(client);
-
-        assertNotNull(clientService.getAll());
-        System.out.println(client);
-    }
-
-    @Test
-    public void read() {
-        try {
-            Client client = ClientFactory.getClient("JJ", "22 Bratton way", "jjwiese@gmail.com", 1224);
-            clientService.create(client);
-
-            Client client1 = clientService.read(Integer.parseInt(client.getClientId()));
-            assertEquals(client, client1);
-        } catch (NumberFormatException nfe) {
-            System.out.println(nfe);
-        }
+        Assert.assertNotNull(clientService.getAll());
 
     }
 
     @Test
-    public void update() {
-        try {
-            Client client = ClientFactory.getClient("AJ", "13 Bratton way", "ajwiese@gmail.com", 1234);
-            clientService.create(client);
+    public void read(){
+        Client client = ClientFactory.getClient("Aj", "13 Bratton Way", "ajwiese@gnail.com");
+        clientService.create(client);
+        Assert.assertNotNull(clientService.getAll());
 
-            Client client1 = ClientFactory.getClient("JJ", "22 Bratton way", "jjwiese@gmail.com", 1224);
-            client1.setClientId(client.getClientId());
-            clientService.update(client1);
-            System.out.println("Original: \n" + client);
-            System.out.println("Updated: \n" + client1);
+        Client client1 = clientService.read(client.getClientId());
+        Assert.assertEquals(client,client1);
+    }
 
-            Client client2 = clientService.read(Integer.parseInt(client1.getClientId()));
-            assertEquals(client1, client2);
-        } catch (NumberFormatException nfe) {
-            System.out.println(nfe);
-        }
+    @Test
+    public void update(){
+        Client client = ClientFactory.getClient("Aj", "13 Bratton Way", "ajwiese@gnail.com");
+        clientService.create(client);
+        Assert.assertNotNull(clientService.getAll());
+
+        Client clientUpdate = ClientFactory.getClient("JJ", "15 Bratton Way", "jjwiese@gnail.com");
+        clientUpdate.setClientId(client.getClientId());
+        clientService.update(clientUpdate);
+
+        Client updated = clientService.read(clientUpdate.getClientId());
+        Assert.assertEquals(clientUpdate,updated);
     }
 
     @Test
     public void delete() {
-        try {
-            Client client = ClientFactory.getClient("Erik", "11 Bratton way", "erik@gmail.com", 2214);
-            clientService.create(client);
+        Client client = ClientFactory.getClient("Aj", "13 Bratton Way", "ajwiese@gnail.com");
+        clientService.create(client);
+        Assert.assertNotNull(clientService.getAll());
+        clientService.delete(client.getClientId());
 
-            assertNotNull(clientService.getAll());
-            Client client1 = clientService.read(Integer.parseInt(client.getClientId()));
-            assertNull(client1);
-        } catch (NumberFormatException nfe) {
-            System.out.println(nfe);
-        }
+        Client deleted = clientService.read(client.getClientId());
+        Assert.assertNull(deleted);
+
     }
 }

@@ -1,32 +1,57 @@
 package wiese.domains.Supplier;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class SupplierLeadTime {
 
+    @Id
     private String leadTimeId;
+    @OneToMany()
+    private String desc;
 
     public SupplierLeadTime() {
     }
 
     public SupplierLeadTime(Builder builder) {
         this.leadTimeId = builder.leadTimeId;
+        this.desc = builder.desc;
     }
 
-    public String getLeadTimeId() {
+    public String getSupplierLeadTimeId() {
         return leadTimeId;
     }
 
-    public void setLeadTimeId(String leadTimeId) {
-        this.leadTimeId = leadTimeId;
+    public String getDesc(){
+        return desc;
+    }
+
+    @Override
+    public String toString() {
+        return "SupplierLeadTime{" +
+                "leadTimeId='" + leadTimeId + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String leadTimeId;
+        private String leadTimeId, desc;
 
         public Builder leadTimeId(String leadTimeId) {
             this.leadTimeId = leadTimeId;
+            return this;
+        }
+
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(SupplierLeadTime leadTime){
+            this.leadTimeId = leadTime.leadTimeId;
+            this.desc = leadTime.desc;
             return this;
         }
 
@@ -35,24 +60,5 @@ public class SupplierLeadTime {
         }
     }
 
-    @Override
-    public String toString() {
-        return "SupplierLeadTime{" +
-                "leadTimeId='" + leadTimeId + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SupplierLeadTime supplierLeadTime = (SupplierLeadTime) o;
-        return leadTimeId.equals(supplierLeadTime.leadTimeId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(leadTimeId);
-    }
 }
 

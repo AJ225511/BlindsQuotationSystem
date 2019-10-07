@@ -1,10 +1,10 @@
 package wiese.repository.Supplier;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Supplier.Supplier;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface SupplierRepository extends JpaRepository<Supplier, String> {
 
-public interface SupplierRepository extends Repository<Supplier, Integer> {
-    Set<Supplier> getAll();
 }

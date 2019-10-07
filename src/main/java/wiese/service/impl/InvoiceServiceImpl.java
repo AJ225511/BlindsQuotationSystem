@@ -1,51 +1,62 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.domains.Invoice.Invoice;
 import wiese.repository.Invoice.InvoiceRepository;
-import wiese.repository.impl.InvoiceRepositoryImpl;
 import wiese.service.Invoice.InvoiceService;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
-@Service("InvoiceServiceImpl")
+@Service
 public class InvoiceServiceImpl implements InvoiceService {
 
-    private InvoiceServiceImpl service = null;
-    private InvoiceRepository repository;
-    private Integer id;
+    private static InvoiceServiceImpl assembleStatusService = null;
+    @Autowired
+    private InvoiceRepository assembleStatusRepository;
 
-    public InvoiceServiceImpl() {
-        repository = InvoiceRepositoryImpl.getRepository();
+    private InvoiceServiceImpl() {
+
     }
 
-    public InvoiceService getService() {
-        if (service == null) service = new InvoiceServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Invoice> getAll() {
-        return this.repository.getAll();
+    public static InvoiceService getInvoiceService() {
+        if (assembleStatusService == null) assembleStatusService = new InvoiceServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
-    public Invoice create(Invoice invoice) {
-        return this.repository.create(invoice);
+    public Invoice create(Invoice assembleStatus) {
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Invoice update(Invoice invoice) {
-        return this.repository.update(invoice);
+    public Invoice read(String s){
+        Optional<Invoice> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Invoice update(Invoice assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Invoice read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public Invoice retrieveByDesc(String assembleDesc){
+        List<Invoice> assembleStatuses = getAll();
+        for(Invoice assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Invoice> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }

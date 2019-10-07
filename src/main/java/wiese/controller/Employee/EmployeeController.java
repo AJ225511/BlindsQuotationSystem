@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -28,19 +29,19 @@ public class EmployeeController {
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         employeeService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Employee read(@PathVariable int id) {
+    public Employee read(@PathVariable String id) {
         return employeeService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Employee> getAll() {
+    public List<Employee> getAll() {
         return employeeService.getAll();
     }
 

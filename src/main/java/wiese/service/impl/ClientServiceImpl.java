@@ -2,52 +2,61 @@ package wiese.service.impl;
 
 import wiese.domains.Client.Client;
 import wiese.repository.Client.ClientRepository;
-import wiese.repository.impl.ClientRepositoryImpl;
 import wiese.service.Client.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
-@Service("ClientServiceImpl")
+@Service
 public class ClientServiceImpl implements ClientService {
 
-    private ClientServiceImpl service = null;
-    private ClientRepository repository;
-    private Integer id;
+    private static ClientServiceImpl clientService = null;
+    @Autowired
+    private ClientRepository clientRepository;
 
-    public ClientServiceImpl() {
-        repository = ClientRepositoryImpl.getRepository();
+    private ClientServiceImpl() {
+
     }
 
-    public ClientService getService() {
-        if (service == null) service = new ClientServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Client> getAll() {
-        return this.repository.getAll();
+    public static ClientService getClientService() {
+        if (clientService == null) clientService = new ClientServiceImpl();
+        return clientService;
     }
 
     @Override
     public Client create(Client client) {
-        return this.repository.create(client);
+        return this.clientRepository.save(client);
     }
 
     @Override
-    public Client update(Client client) {
-        return this.repository.update(client);
+    public Client read(String s){
+        Optional<Client> client = this.clientRepository.findById(s);
+        return client.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Client update(Client client){
+        return this.clientRepository.save(client);
     }
 
     @Override
-    public Client read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.clientRepository.deleteById(s);
+    }
+
+    @Override
+    public Client retrieveByDesc(String assembleDesc){
+        List<Client> clientes = getAll();
+        for(Client client: clientes){
+            if(client.getDesc().equalsIgnoreCase(assembleDesc)) return client;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Client> getAll(){
+        return this.clientRepository.findAll();
     }
 }

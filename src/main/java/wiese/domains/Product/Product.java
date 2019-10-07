@@ -1,10 +1,15 @@
 package wiese.domains.Product;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class Product {
 
-    private String productId, productName;
+    @Id
+    private String productId,productName;
+    @OneToMany()
+    private String desc;
 
     public Product() {
     }
@@ -12,23 +17,29 @@ public class Product {
     public Product(Builder builder) {
         this.productId = builder.productId;
         this.productName = builder.productName;
+        this.desc = builder.desc;
     }
 
     public String getProductId() {
         return productId;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getDesc(){
+        return desc;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId='" + productId + '\'' +
+                "productName='" + productName + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String productId, productName;
+        private String productId,productName, desc;
 
         public Builder productId(String productId) {
             this.productId = productId;
@@ -40,29 +51,20 @@ public class Product {
             return this;
         }
 
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(Product product){
+            this.productId = product.productId;
+            this.productName=product.productName;
+            this.desc = product.desc;
+            return this;
+        }
+
         public Product build() {
             return new Product(this);
-        }
-
-        @Override
-        public String toString() {
-            return "Product{" +
-                    "productId='" + productId + '\'' +
-                    ", productName='" + productName + '\'' +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Product product = (Product) o;
-            return productId.equals(product.productId);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(productId);
         }
     }
 

@@ -1,10 +1,10 @@
 package wiese.repository.Product;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Product.Product;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface ProductRepository extends JpaRepository<Product, String> {
 
-public interface ProductRepository extends Repository<Product, Integer> {
-    Set<Product> getAll();
 }

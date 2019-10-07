@@ -1,10 +1,10 @@
 package wiese.repository.Employee;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Employeee.Employee;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, String> {
 
-public interface EmployeeRepository extends Repository<Employee, Integer> {
-    Set<Employee> getAll();
 }

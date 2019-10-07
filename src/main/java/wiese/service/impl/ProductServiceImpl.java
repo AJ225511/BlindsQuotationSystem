@@ -1,52 +1,64 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.domains.Product.Product;
 import wiese.repository.Product.ProductRepository;
-import wiese.repository.impl.ProductRepositoryImpl;
 import wiese.service.Product.ProductService;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service("ProductServiceImpl")
 public class ProductServiceImpl implements ProductService {
 
-    private ProductServiceImpl service = null;
-    private ProductRepository repository;
-    private Integer id;
+    private static ProductServiceImpl assembleStatusService = null;
+    @Autowired
+    private ProductRepository assembleStatusRepository;
 
-    public ProductServiceImpl() {
-        repository = ProductRepositoryImpl.getRepository();
+    private ProductServiceImpl() {
+
     }
 
-    public ProductService getService() {
-        if (service == null) service = new ProductServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Product> getAll() {
-        return this.repository.getAll();
+    public static ProductService getProductService() {
+        if (assembleStatusService == null) assembleStatusService = new ProductServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
-    public Product create(Product product) {
-        return this.repository.create(product);
+    public Product create(Product assembleStatus) {
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Product update(Product product) {
-        return this.repository.update(product);
+    public Product read(String s){
+        Optional<Product> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Product update(Product assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Product read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public Product retrieveByDesc(String assembleDesc){
+        List<Product> assembleStatuses = getAll();
+        for(Product assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Product> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }
 

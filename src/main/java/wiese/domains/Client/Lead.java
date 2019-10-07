@@ -1,17 +1,23 @@
 package wiese.domains.Client;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class Lead {
 
+    @Id
     private String leadId, leadDate;
+    @OneToMany()
+    private String desc;
 
     public Lead() {
     }
 
     public Lead(Builder builder) {
-        this.leadDate = builder.leadDate;
         this.leadId = builder.leadId;
+        this.leadDate=builder.leadDate;
+        this.desc = builder.desc;
     }
 
     public String getLeadId() {
@@ -22,13 +28,22 @@ public class Lead {
         return leadDate;
     }
 
-    public void setLeadId(String leadId) {
-        this.leadId = leadId;
+    public String getDesc(){
+        return desc;
+    }
+
+    @Override
+    public String toString() {
+        return "Lead{" +
+                "leadId='" + leadId + '\'' +
+                "leadDate='" + leadDate + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String leadId, leadDate;
+        private String leadId,leadDate, desc;
 
         public Builder leadId(String leadId) {
             this.leadId = leadId;
@@ -40,30 +55,22 @@ public class Lead {
             return this;
         }
 
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(Lead lead){
+            this.leadId = lead.leadId;
+            this.leadDate=lead.leadDate;
+            this.desc = lead.desc;
+            return this;
+        }
+
         public Lead build() {
             return new Lead(this);
         }
     }
 
-    @Override
-    public String toString() {
-        return "Lead{" +
-                "leadId='" + leadId + '\'' +
-                ", leadDate='" + leadDate + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Lead lead = (Lead) o;
-        return leadId.equals(lead.leadId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(leadId);
-    }
 }
 

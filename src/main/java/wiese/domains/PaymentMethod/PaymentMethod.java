@@ -1,44 +1,52 @@
 package wiese.domains.PaymentMethod;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class PaymentMethod {
-
-    private String paymentId, paymentDate;
-    private int paymentAmount;
+    
+    @Id
+    private String paymentMethodId, paymentDate;
+    @OneToMany()
+    private String desc;
 
     public PaymentMethod() {
     }
 
     public PaymentMethod(Builder builder) {
-        this.paymentAmount = builder.paymentAmount;
+        this.paymentMethodId = builder.paymentMethodId;
         this.paymentDate = builder.paymentDate;
-        this.paymentId = builder.paymentId;
+        this.desc = builder.desc;
     }
 
-    public String getPaymentId() {
-        return paymentId;
+    public String getPaymentMethodId() {
+        return paymentMethodId;
     }
 
-    public String getPaymentDate() {
+    public String getPaymentDate(){
         return paymentDate;
     }
 
-    public int getPaymentAmount() {
-        return paymentAmount;
+    public String getDesc(){
+        return desc;
     }
 
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
+    @Override
+    public String toString() {
+        return "PaymentMethod{" +
+                "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentDate='" + paymentDate + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String paymentId, paymentDate;
-        private int paymentAmount;
+        private String paymentMethodId,paymentDate, desc;
 
-        public Builder paymentId(String paymentId) {
-            this.paymentId = paymentId;
+        public Builder paymentMethodId(String paymentMethodId) {
+            this.paymentMethodId = paymentMethodId;
             return this;
         }
 
@@ -47,37 +55,22 @@ public class PaymentMethod {
             return this;
         }
 
-        public Builder paymentAmount(int paymentAmount) {
-            this.paymentAmount = paymentAmount;
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(PaymentMethod paymentMethod){
+            this.paymentMethodId = paymentMethod.paymentMethodId;
+            this.paymentDate = paymentMethod.paymentDate;
+            this.desc = paymentMethod.desc;
             return this;
         }
 
         public PaymentMethod build() {
             return new PaymentMethod(this);
         }
-
     }
 
-    @Override
-    public String toString() {
-        return "PaymentMethod{" +
-                "paymentId='" + paymentId + '\'' +
-                ", paymentDate='" + paymentDate + '\'' +
-                ", paymentAmount='" + paymentAmount + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PaymentMethod paymentMethod = (PaymentMethod) o;
-        return paymentId.equals(paymentMethod.paymentId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(paymentId);
-    }
 }
 

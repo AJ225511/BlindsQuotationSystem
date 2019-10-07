@@ -7,7 +7,7 @@ public class QuotationItemStatusFactory {
 
     public static QuotationItemStatus getQuotationItemStatus() {
         return (QuotationItemStatus) new QuotationItemStatus.Builder()
-                .quotationItemStatusId(Misc.generateId())
+                .quotationStatusId(Misc.generateId())
                 .build();
     }
 }

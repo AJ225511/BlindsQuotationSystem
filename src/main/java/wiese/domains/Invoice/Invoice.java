@@ -1,18 +1,24 @@
 package wiese.domains.Invoice;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class Invoice {
 
+    @Id
     private String invoiceId, invoiceDate, invoiceItems;
+    @OneToMany()
+    private String desc;
 
     public Invoice() {
     }
 
     public Invoice(Builder builder) {
-        this.invoiceDate = builder.invoiceDate;
         this.invoiceId = builder.invoiceId;
-        this.invoiceItems = builder.invoiceItems;
+        this.invoiceDate=builder.invoiceDate;
+        this.invoiceItems=builder.invoiceItems;
+        this.desc = builder.desc;
     }
 
     public String getInvoiceId() {
@@ -27,13 +33,23 @@ public class Invoice {
         return invoiceItems;
     }
 
-    public void setInvoiceId(String invoiceId) {
-        this.invoiceId = invoiceId;
+    public String getDesc(){
+        return desc;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "invoiceId='" + invoiceId + '\'' +
+                "invoiceDate='" + invoiceDate + '\'' +
+                "invoiceId='" + invoiceId + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String invoiceId, invoiceDate, invoiceItems;
+        private String invoiceId,invoiceDate, invoiceItems, desc;
 
         public Builder invoiceId(String invoiceId) {
             this.invoiceId = invoiceId;
@@ -50,32 +66,22 @@ public class Invoice {
             return this;
         }
 
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(Invoice invoice){
+            this.invoiceId = invoice.invoiceId;
+            this.invoiceDate=invoice.invoiceDate;
+            this.invoiceItems=invoice.invoiceItems;
+            this.desc = invoice.desc;
+            return this;
+        }
+
         public Invoice build() {
             return new Invoice(this);
         }
-
-
     }
 
-    @Override
-    public String toString() {
-        return "Invoice{" +
-                "invoiceId: '" + invoiceId + '\'' +
-                ", invoiceDate: '" + invoiceDate + '\'' +
-                ", invoiceItems: '" + invoiceItems + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Invoice invoice = (Invoice) o;
-        return invoiceId.equals(invoice.invoiceId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(invoiceId);
-    }
 }

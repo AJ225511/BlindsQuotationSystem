@@ -1,56 +1,64 @@
 package wiese.domains.Quotation;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class QuotationItemStatus extends Quotation {
 
-    private String quotationItemStatusId;
+    @Id
+    private String quotationStatusId;
+    @OneToMany()
+    private String desc;
 
     public QuotationItemStatus() {
     }
 
     public QuotationItemStatus(Builder builder) {
-        super(builder);
-        this.quotationItemStatusId = builder.quotationItemStatusId;
+        this.quotationStatusId = builder.quotationStatusId;
+        this.desc = builder.desc;
     }
 
     public String getQuotationItemStatusId() {
-        return quotationItemStatusId;
+        return quotationStatusId;
     }
 
-    public static class Builder extends Quotation.Builder {
-
-        private String quotationItemStatusId;
-
-        public Builder quotationItemStatusId(String quotationItemStatusId) {
-            this.quotationItemStatusId = quotationItemStatusId;
-            return this;
-        }
-
-        @Override
-        public Quotation build() {
-            return null;
-        }
+    public String getDesc(){
+        return desc;
     }
 
     @Override
     public String toString() {
         return "QuotationItemStatus{" +
-                "quotationItemStatusId='" + quotationItemStatusId + '\'' +
+                "quotationStatusId='" + quotationStatusId + '\'' +
+                "desc='" + desc + '\'' +
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        QuotationItemStatus quotationItemStatus = (QuotationItemStatus) o;
-        return quotationItemStatusId.equals(quotationItemStatus.quotationItemStatusId);
+    public static class Builder {
+
+        private String quotationStatusId, desc;
+
+        public Builder quotationStatusId(String quotationStatusId) {
+            this.quotationStatusId = quotationStatusId;
+            return this;
+        }
+
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(QuotationItemStatus quotationStatus){
+            this.quotationStatusId = quotationStatus.quotationStatusId;
+            this.desc = quotationStatus.desc;
+            return this;
+        }
+
+        public QuotationItemStatus build() {
+            return new QuotationItemStatus(this);
+        }
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(quotationItemStatusId);
-    }
 }
 

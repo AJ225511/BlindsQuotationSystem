@@ -6,10 +6,11 @@ import wiese.service.Client.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/blinds/client")
 public class ClientController {
 
     @Autowired
@@ -26,17 +27,17 @@ public class ClientController {
     }
 
     @GetMapping("/delete/{id}")
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         clientService.delete(id);
     }
 
     @GetMapping("/read/{id}")
-    public Client read(@PathVariable int id) {
+    public Client read(@PathVariable String id) {
         return clientService.read(id);
     }
 
     @GetMapping("read/all")
-    public Set<Client> getAll() {
+    public List<Client> getAll() {
         return clientService.getAll();
     }
 

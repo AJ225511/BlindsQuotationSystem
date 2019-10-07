@@ -2,9 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2380fcde-79b1-42e7-90e8-c59056b5cc9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/BlindsQuotationSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Client/LeadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Client/LeadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Company/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Company/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Employee/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Employee/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Invoice/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Invoice/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Order/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/PaymentMethod/PaymentMethodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/PaymentMethod/PaymentMethodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Quotation/QuotationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Quotation/QuotationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/AssembleStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/AssembleStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierLeadTimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierLeadTimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Lead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Lead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Company/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Company/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Employeee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Employeee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Invoice/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Invoice/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/Quotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItemStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/AssembleStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/AssembleStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/SupplierLeadTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/SupplierLeadTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/factories/Client/ClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/factories/Client/ClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/factories/PaymentMethod/PaymentMethodFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/factories/PaymentMethod/PaymentMethodFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/factories/Quotation/QuotationItemStatusFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/factories/Quotation/QuotationItemStatusFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Client/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Client/LeadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Client/LeadRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Employee/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Employee/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Invoice/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Invoice/InvoiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Order/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Order/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/PaymentMethod/PaymentMethodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/PaymentMethod/PaymentMethodRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Quotation/QuotationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Quotation/QuotationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/AssembleStatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/AssembleStatusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/SupplierLeadTimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/SupplierLeadTimeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/SupplierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/Supplier/SupplierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/ClientRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/ClientRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/EmployeeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/InvoiceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/InvoiceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/LeadRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/LeadRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/OrderRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/PaymentMethodRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/PaymentMethodRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/QuotationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/QuotationRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/SupplierLeadTimeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/SupplierLeadTimeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/SupplierRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/repository/impl/SupplierRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Client/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Client/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Client/LeadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Company/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Company/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Employee/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Employee/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Invoice/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Invoice/InvoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Order/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/PaymentMethod/PaymentMethodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/PaymentMethod/PaymentMethodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Product/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Quotation/QuotationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Quotation/QuotationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/AssembleStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/AssembleStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierLeadTimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierLeadTimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/AssembleStatusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/AssembleStatusServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/CompanyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/InvoiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/InvoiceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/LeadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/LeadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/PaymentMethodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/PaymentMethodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/QuotationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/QuotationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/SupplierLeadTimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/SupplierLeadTimeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiese/service/impl/SupplierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiese/service/impl/SupplierServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Client/ClientRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Client/LeadRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Company/CompanyRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Employee/EmployeeRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Invoice/InvoiceRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Order/OrderRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/PaymentMethod/PaymentMethodRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Product/ProductRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Quotation/QuotationRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Supplier/AssembleStatusRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/repository/Supplier/SupplierLeadTimeRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Client/ClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Client/ClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Client/LeadServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Client/LeadServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Company/CompanyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Company/CompanyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Employee/EmployeeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Employee/EmployeeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Invoice/InvoiceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Invoice/InvoiceServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Order/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Order/OrderServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/PaymentMethod/PaymentMethodServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/PaymentMethod/PaymentMethodServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Product/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Product/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Quotation/QuotationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Quotation/QuotationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/AssembleStatusServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/AssembleStatusServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierLeadTimeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierLeadTimeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,32 +121,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsQuotationSystemApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+            <state relative-caret-position="119">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4182" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/impl/ClientServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Client/ClientServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="89" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,22 +193,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/ClientFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/LeadControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -73,53 +204,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1081">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="459">
+              <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Client/ClientRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Client/ClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,10 +247,35 @@
     <findStrings>
       <find>employeeGender</find>
       <find>responseEntity</find>
+      <find>AssembleStatus</find>
+      <find>assembleStatus</find>
     </findStrings>
     <replaceStrings>
-      <replace>company</replace>
       <replace>result</replace>
+      <replace>supplier</replace>
+      <replace>leadTime</replace>
+      <replace>SupplierLeadTime</replace>
+      <replace>QuotationItemStatus</replace>
+      <replace>quotationItem</replace>
+      <replace>product</replace>
+      <replace>paymentMethod</replace>
+      <replace>CreditCard</replace>
+      <replace>check</replace>
+      <replace>employee</replace>
+      <replace>company</replace>
+      <replace>Client</replace>
+      <replace>Company</replace>
+      <replace>Employee</replace>
+      <replace>Invoice</replace>
+      <replace>Lead</replace>
+      <replace>Order</replace>
+      <replace>PaymentMethod</replace>
+      <replace>Product</replace>
+      <replace>Quotation</replace>
+      <replace>Supplier</replace>
+      <replace>lead</replace>
+      <replace>quotationStatus</replace>
+      <replace>client</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -149,15 +284,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/util/IdGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/Misc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domains/Client/WebRequestFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wiese/repository/Company/impl/CompanyRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java" />
-        <option value="$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/Invoice/InvoiceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/PaymentMethod/PaymentMethodService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/Product/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/Quotation/QuotationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/InvoiceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/PaymentMethodServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/QuotationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/SupplierServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Lead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/Client/LeadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/LeadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/factories/PaymentMethod/PaymentMethodFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItemStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/factories/Quotation/QuotationItemStatusFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierLeadTimeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/AssembleStatusController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Quotation/QuotationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Product/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/PaymentMethod/PaymentMethodController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Order/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Invoice/InvoiceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Employee/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Company/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Client/LeadController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Client/LeadServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Company/CompanyServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Employee/EmployeeServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Invoice/InvoiceServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Order/OrderServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/PaymentMethod/PaymentMethodServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Product/ProductServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Quotation/QuotationServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/AssembleStatusServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierLeadTimeServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/service/impl/ClientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/factories/Client/ClientFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java" />
+        <option value="$PROJECT_DIR$/src/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/BlindsQuotationSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/BlindsQuotationSystemApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wiese/service/Client/ClientServiceTest.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -171,6 +356,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +367,11 @@
             <path>
               <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,25 +394,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wiese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -247,18 +419,7 @@
               <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +449,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -297,29 +458,26 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlindsQuotationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlindsQuotationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wiese" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569814907172" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570425590941" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AJ\IdeaProjects\BlindsQuotationSystem\src\main" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -333,9 +491,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ClientControllerTest.createClient">
-    <configuration name="BlindsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiese.BlindsApplication" />
+  <component name="RunManager" selected="JUnit.ClientServiceTest">
+    <configuration name="BlindsQuotationSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wiese.BlindsQuotationSystemApplication" />
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
         <pattern>
@@ -347,63 +505,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wiese.controller.Client.*" />
+          <option name="PATTERN" value="wiese.service.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wiese.controller.Client" />
-      <option name="MAIN_CLASS_NAME" value="wiese.controller.Client.ClientControllerTest" />
+      <option name="PACKAGE_NAME" value="wiese.service.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.service.Client.ClientServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientControllerTest.createClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientServiceTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wiese.controller.Client.*" />
+          <option name="PATTERN" value="wiese.service.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wiese.controller.Client" />
-      <option name="MAIN_CLASS_NAME" value="wiese.controller.Client.ClientControllerTest" />
-      <option name="METHOD_NAME" value="createClient" />
+      <option name="PACKAGE_NAME" value="wiese.service.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.service.Client.ClientServiceTest" />
+      <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompanyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientServiceTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wiese.controller.Company.*" />
+          <option name="PATTERN" value="wiese.service.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wiese.controller.Company" />
-      <option name="MAIN_CLASS_NAME" value="wiese.controller.Company.CompanyControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="wiese.service.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.service.Client.ClientServiceTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompanyControllerTest.correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientServiceTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlindsQuotationSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wiese.controller.Company.*" />
+          <option name="PATTERN" value="wiese.service.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wiese.controller.Company" />
-      <option name="MAIN_CLASS_NAME" value="wiese.controller.Company.CompanyControllerTest" />
-      <option name="METHOD_NAME" value="correct" />
+      <option name="PACKAGE_NAME" value="wiese.service.Client" />
+      <option name="MAIN_CLASS_NAME" value="wiese.service.Client.ClientServiceTest" />
+      <option name="METHOD_NAME" value="read" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -411,11 +570,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClientControllerTest.createClient" />
-        <item itemvalue="JUnit.ClientControllerTest" />
-        <item itemvalue="Application.BlindsApplication" />
-        <item itemvalue="JUnit.CompanyControllerTest" />
-        <item itemvalue="JUnit.CompanyControllerTest.correct" />
+        <item itemvalue="JUnit.ClientServiceTest" />
+        <item itemvalue="JUnit.ClientServiceTest.create" />
+        <item itemvalue="Application.BlindsQuotationSystemApplication" />
+        <item itemvalue="JUnit.ClientServiceTest.getAll" />
+        <item itemvalue="JUnit.ClientServiceTest.read" />
       </list>
     </recent_temporary>
   </component>
@@ -437,46 +596,53 @@
       <option name="project" value="LOCAL" />
       <updated>1569211554244</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minor change">
+      <created>1569814938382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569814938382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 25m 44s.xml">
-      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest - 2019.10.07 at 06h 43m 06s.xml">
+      <configuration name="ClientServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 27m 07s.xml">
-      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 06h 46m 58s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompanyControllerTest_correct - 2019.09.30 at 05h 27m 27s.xml">
-      <configuration name="CompanyControllerTest.correct" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 06h 49m 10s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompanyControllerTest - 2019.09.30 at 05h 29m 16s.xml">
-      <configuration name="CompanyControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 06h 51m 48s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompanyControllerTest - 2019.09.30 at 05h 29m 51s.xml">
-      <configuration name="CompanyControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 06h 57m 33s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 31m 25s.xml">
-      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest - 2019.10.07 at 07h 03m 03s.xml">
+      <configuration name="ClientServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 32m 45s.xml">
-      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest - 2019.10.07 at 07h 04m 08s.xml">
+      <configuration name="ClientServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 33m 41s.xml">
-      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 07h 05m 30s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 34m 51s.xml">
-      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 07h 09m 23s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ClientControllerTest - 2019.09.30 at 05h 38m 06s.xml">
-      <configuration name="ClientControllerTest" configurationId="JUnit" />
+    <history-entry file="ClientServiceTest_create - 2019.10.07 at 07h 10m 09s.xml">
+      <configuration name="ClientServiceTest.create" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21801706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -486,7 +652,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -506,7 +672,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Security" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Security" />
+    <MESSAGE value="Minor change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,179 +688,458 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Supplier/AssembleStatus.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Lead.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Existing.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Referral.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/WebRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Google.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/Client/Client.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/sad.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/ClientFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/ExistingFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/GoogleFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/LeadFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/ReferralFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Client/WebRequestFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Company/CompanyFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Employee/DomesticFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Employee/EmployeeFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Employee/InstallerFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Employee/RepresentativeFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Employee/SecretaryFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Invoice/InvoiceFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Order/PaymentMethodFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Order/OrderFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/PaymentMethod/PaymentMethodFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/PaymentMethod/CashFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/PaymentMethod/CreditCardFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/PaymentMethod/CheckFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Product/ProductFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Quotation/QuotationFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Quotation/QuotationItemFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Quotation/QuotationItemStatusFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Quotation/QuotationStatusFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/SupplierFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/AssembleStatusFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domains/Supplier/SupplierLeadTimeFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/factory/Client/ClientFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Order/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Invoice/InvoiceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        <state relative-caret-position="68">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/util/Misc.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierLeadTimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Supplier/SupplierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Supplier/AssembleStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="19" selection-start-line="6" selection-start-column="4" selection-end-line="60" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Lead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Client/LeadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/impl/LeadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/ExistingFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Repository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/GoogleFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/impl/CompanyServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/LeadFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/impl/CompanyRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/ReferralFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Company/CompanyRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/WebRequestFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/PaymentMethod/PaymentMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/AssembleStatusRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/PaymentMethod/PaymentMethodFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/impl/CompanyRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Quotation/QuotationItemStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        <state relative-caret-position="834">
+          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#1428#1429#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Quotation/QuotationItemStatusFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1081">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierLeadTimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/AssembleStatusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Supplier/SupplierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Quotation/QuotationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Product/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/PaymentMethod/PaymentMethodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Order/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Invoice/InvoiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+          <folding>
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Employee/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Company/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Client/LeadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Client/LeadServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Company/CompanyServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="75" />
+          <folding>
+            <element signature="e#0#2632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Employee/EmployeeServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="75" />
+          <folding>
+            <element signature="e#0#2731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Invoice/InvoiceServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Order/OrderServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-809">
+          <caret selection-start-column="2" selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/PaymentMethod/PaymentMethodServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Product/ProductServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="75" />
+          <folding>
+            <element signature="e#0#2591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Quotation/QuotationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierLeadTimeServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#3011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Supplier/SupplierServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="75" />
+          <folding>
+            <element signature="e#0#2753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Supplier/AssembleStatusServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2922#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wiese/controller/Client/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/security/BlindSecurity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="296">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/LeadControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/factories/Client/ClientFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Company/CompanyControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/Client/ClientService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="89" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/service/impl/ClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/controller/Client/ClientControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/repository/Client/ClientRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+        <state relative-caret-position="85">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.6.RELEASE/spring-test-5.1.6.RELEASE.jar!/org/springframework/test/context/cache/DefaultCacheAwareContextLoaderDelegate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/BlindsQuotationSystemApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4182" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wiese/domains/Client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <element signature="e#1063#1064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wiese/service/Client/ClientServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -703,9 +1149,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8.0_201</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>BlindsQuotationSystem</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

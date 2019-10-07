@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -28,19 +29,19 @@ public class PaymentMethodController {
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         paymentMethodService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public PaymentMethod read(@PathVariable int id) {
+    public PaymentMethod read(@PathVariable String id) {
         return paymentMethodService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<PaymentMethod> getAll() {
+    public List<PaymentMethod> getAll() {
         return paymentMethodService.getAll();
     }
 

@@ -1,51 +1,63 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.domains.Quotation.Quotation;
 import wiese.repository.Quotation.QuotationRepository;
-import wiese.repository.impl.QuotationRepositoryImpl;
 import wiese.service.Quotation.QuotationService;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
-@Service("QuotationServiceImpl")
+@Service
 public class QuotationServiceImpl implements QuotationService {
 
-    private QuotationServiceImpl service = null;
-    private QuotationRepository repository;
-    private Integer id;
+    private static QuotationServiceImpl assembleStatusService = null;
+    @Autowired
+    private QuotationRepository assembleStatusRepository;
 
-    public QuotationServiceImpl() {
-        repository = QuotationRepositoryImpl.getRepository();
+    private QuotationServiceImpl() {
+
     }
 
-    public QuotationService getService() {
-        if (service == null) service = new QuotationServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Quotation> getAll() {
-        return this.repository.getAll();
+    public static QuotationService getQuotationService() {
+        if (assembleStatusService == null) assembleStatusService = new QuotationServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
-    public Quotation create(Quotation quotation) {
-        return this.repository.create(quotation);
+    public Quotation create(Quotation assembleStatus) {
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Quotation update(Quotation quotation) {
-        return this.repository.update(quotation);
+    public Quotation read(String s){
+        Optional<Quotation> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Quotation update(Quotation assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Quotation read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public Quotation retrieveByDesc(String assembleDesc){
+        List<Quotation> assembleStatuses = getAll();
+        for(Quotation assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Quotation> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }

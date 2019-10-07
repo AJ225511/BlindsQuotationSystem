@@ -1,52 +1,64 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.service.Company.CompanyService;
 import wiese.domains.Company.Company;
 import wiese.repository.Company.CompanyRepository;
-import wiese.repository.impl.CompanyRepositoryImpl;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
-@Service("CompanyServiceImpl")
+@Service
 public class CompanyServiceImpl implements CompanyService {
 
-    private CompanyServiceImpl service = null;
-    private CompanyRepository repository;
-    private Integer id;
+    private static CompanyServiceImpl assembleStatusService = null;
+    @Autowired
+    private CompanyRepository assembleStatusRepository;
 
-    public CompanyServiceImpl() {
-        repository = CompanyRepositoryImpl.getRepository();
+    private CompanyServiceImpl() {
+
     }
 
-    public CompanyService getService() {
-        if (service == null) service = new CompanyServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Company> getAll() {
-        return this.repository.getAll();
+    public static CompanyService getCompanyService() {
+        if (assembleStatusService == null) assembleStatusService = new CompanyServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
-    public Company create(Company company) {
-        return this.repository.create(company);
+    public Company create(Company assembleStatus) {
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Company update(Company company) {
-        return this.repository.update(company);
+    public Company read(String s){
+        Optional<Company> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Company update(Company assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Company read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public Company retrieveByDesc(String assembleDesc){
+        List<Company> assembleStatuses = getAll();
+        for(Company assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Company> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }
+
 

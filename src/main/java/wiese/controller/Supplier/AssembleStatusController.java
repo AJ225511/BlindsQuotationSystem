@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -28,19 +29,19 @@ public class AssembleStatusController {
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         assembleStatusService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public AssembleStatus read(@PathVariable int id) {
+    public AssembleStatus read(@PathVariable String id) {
         return assembleStatusService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<AssembleStatus> getAll() {
+    public List<AssembleStatus> getAll() {
         return assembleStatusService.getAll();
     }
 

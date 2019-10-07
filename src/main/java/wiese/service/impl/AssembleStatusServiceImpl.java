@@ -3,50 +3,62 @@ package wiese.service.impl;
 import org.springframework.stereotype.Service;
 import wiese.domains.Supplier.AssembleStatus;
 import wiese.repository.Supplier.AssembleStatusRepository;
-import wiese.repository.impl.AssembleStatusRepositoryImpl;
 import wiese.service.Supplier.AssembleStatusService;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
-@Service("AssembleStatusServiceImpl")
+@Service
 public class AssembleStatusServiceImpl implements AssembleStatusService {
 
-    private AssembleStatusServiceImpl service = null;
-    private AssembleStatusRepository repository;
-    private Integer id;
+    private static AssembleStatusServiceImpl assembleStatusService = null;
+    @Autowired
+    private AssembleStatusRepository assembleStatusRepository;
 
-    public AssembleStatusServiceImpl() {
-        repository = AssembleStatusRepositoryImpl.getRepository();
+    private AssembleStatusServiceImpl() {
+
     }
 
-    public AssembleStatusService getService() {
-        if (service == null) service = new AssembleStatusServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<AssembleStatus> getAll() {
-        return this.repository.getAll();
+    public static AssembleStatusService getAssembleStatusService() {
+        if (assembleStatusService == null) assembleStatusService = new AssembleStatusServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
     public AssembleStatus create(AssembleStatus assembleStatus) {
-        return this.repository.create(assembleStatus);
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public AssembleStatus update(AssembleStatus assembleStatus) {
-        return this.repository.update(assembleStatus);
+    public AssembleStatus read(String s){
+        Optional<AssembleStatus> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public AssembleStatus update(AssembleStatus assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public AssembleStatus read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public AssembleStatus retrieveByDesc(String assembleDesc){
+        List<AssembleStatus> assembleStatuses = getAll();
+        for(AssembleStatus assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<AssembleStatus> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }
 

@@ -1,10 +1,10 @@
 package wiese.repository.Invoice;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Invoice.Invoice;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface InvoiceRepository extends JpaRepository<Invoice, String> {
 
-public interface InvoiceRepository extends Repository<Invoice, Integer> {
-    Set<Invoice> getAll();
 }

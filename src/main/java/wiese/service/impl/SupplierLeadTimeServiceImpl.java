@@ -1,52 +1,64 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.domains.Supplier.SupplierLeadTime;
 import wiese.repository.Supplier.SupplierLeadTimeRepository;
-import wiese.repository.impl.SupplierLeadTimeRepositoryImpl;
 import wiese.service.Supplier.SupplierLeadTimeService;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
-@Service("SupplierLeadTimeServiceImpl")
+@Service
 public class SupplierLeadTimeServiceImpl implements SupplierLeadTimeService {
 
-    private SupplierLeadTimeServiceImpl service = null;
-    private SupplierLeadTimeRepository repository;
-    private Integer id;
+    private static SupplierLeadTimeServiceImpl leadTimeService = null;
+    @Autowired
+    private SupplierLeadTimeRepository leadTimeRepository;
 
-    public SupplierLeadTimeServiceImpl() {
-        repository = SupplierLeadTimeRepositoryImpl.getRepository();
+    private SupplierLeadTimeServiceImpl() {
+
     }
 
-    public SupplierLeadTimeService getService() {
-        if (service == null) service = new SupplierLeadTimeServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<SupplierLeadTime> getAll() {
-        return this.repository.getAll();
+    public static SupplierLeadTimeService getSupplierLeadTimeService() {
+        if (leadTimeService == null) leadTimeService = new SupplierLeadTimeServiceImpl();
+        return leadTimeService;
     }
 
     @Override
-    public SupplierLeadTime create(SupplierLeadTime supplierLeadTime) {
-        return this.repository.create(supplierLeadTime);
+    public SupplierLeadTime create(SupplierLeadTime leadTime) {
+        return this.leadTimeRepository.save(leadTime);
     }
 
     @Override
-    public SupplierLeadTime update(SupplierLeadTime supplierLeadTime) {
-        return this.repository.update(supplierLeadTime);
+    public SupplierLeadTime read(String s){
+        Optional<SupplierLeadTime> leadTime = this.leadTimeRepository.findById(s);
+        return leadTime.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public SupplierLeadTime update(SupplierLeadTime leadTime){
+        return this.leadTimeRepository.save(leadTime);
     }
 
     @Override
-    public SupplierLeadTime read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.leadTimeRepository.deleteById(s);
+    }
+
+    @Override
+    public SupplierLeadTime retrieveByDesc(String assembleDesc){
+        List<SupplierLeadTime> leadTimees = getAll();
+        for(SupplierLeadTime leadTime: leadTimees){
+            if(leadTime.getDesc().equalsIgnoreCase(assembleDesc)) return leadTime;
+        }
+        return null;
+    }
+
+    @Override
+    public List<SupplierLeadTime> getAll(){
+        return this.leadTimeRepository.findAll();
     }
 }
 

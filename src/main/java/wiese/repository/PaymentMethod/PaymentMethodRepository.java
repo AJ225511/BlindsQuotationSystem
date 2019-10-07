@@ -1,10 +1,10 @@
 package wiese.repository.PaymentMethod;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.PaymentMethod.PaymentMethod;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface PaymentMethodRepository extends JpaRepository<PaymentMethod, String> {
 
-public interface PaymentMethodRepository extends Repository<PaymentMethod, Integer> {
-    Set<PaymentMethod> getAll();
 }

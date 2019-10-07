@@ -1,10 +1,11 @@
 package wiese.repository.Supplier;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Supplier.SupplierLeadTime;
-import wiese.repository.Repository;
 
-import java.util.Set;
 
-public interface SupplierLeadTimeRepository extends Repository<SupplierLeadTime, Integer> {
-    Set<SupplierLeadTime> getAll();
+@Repository
+public interface SupplierLeadTimeRepository extends JpaRepository<SupplierLeadTime, String> {
+
 }

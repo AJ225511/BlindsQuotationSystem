@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -28,19 +29,19 @@ public class SupplierLeadTimeController {
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         supplierLeadTimeService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public SupplierLeadTime read(@PathVariable int id) {
+    public SupplierLeadTime read(@PathVariable String id) {
         return supplierLeadTimeService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<SupplierLeadTime> getAll() {
+    public List<SupplierLeadTime> getAll() {
         return supplierLeadTimeService.getAll();
     }
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -28,19 +29,19 @@ public class QuotationController {
 
     @GetMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         quotationService.delete(id);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Quotation read(@PathVariable int id) {
+    public Quotation read(@PathVariable String id) {
         return quotationService.read(id);
     }
 
     @GetMapping("read/all")
     @ResponseBody
-    public Set<Quotation> getAll() {
+    public List<Quotation> getAll() {
         return quotationService.getAll();
     }
 

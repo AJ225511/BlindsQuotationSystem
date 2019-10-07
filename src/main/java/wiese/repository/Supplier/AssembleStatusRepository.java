@@ -1,10 +1,10 @@
 package wiese.repository.Supplier;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import wiese.domains.Supplier.AssembleStatus;
-import wiese.repository.Repository;
 
-import java.util.Set;
+@Repository
+public interface AssembleStatusRepository extends JpaRepository<AssembleStatus, String> {
 
-public interface AssembleStatusRepository extends Repository<AssembleStatus, Integer> {
-    Set<AssembleStatus> getAll();
 }

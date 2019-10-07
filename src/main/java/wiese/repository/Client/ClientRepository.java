@@ -1,10 +1,10 @@
 package wiese.repository.Client;
 
 import wiese.domains.Client.Client;
-import wiese.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface ClientRepository extends JpaRepository<Client, String> {
 
-public interface ClientRepository extends Repository<Client, Integer> {
-    Set<Client> getAll();
 }

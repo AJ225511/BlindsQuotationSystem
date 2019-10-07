@@ -1,51 +1,62 @@
 package wiese.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wiese.domains.Employeee.Employee;
 import wiese.repository.Employee.EmployeeRepository;
-import wiese.repository.impl.EmployeeRepositoryImpl;
 import wiese.service.Employee.EmployeeService;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
-@Service("EmployeeServiceImpl")
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private EmployeeServiceImpl service = null;
-    private EmployeeRepository repository;
-    private Integer id;
+    private static EmployeeServiceImpl assembleStatusService = null;
+    @Autowired
+    private EmployeeRepository assembleStatusRepository;
 
-    public EmployeeServiceImpl() {
-        repository = EmployeeRepositoryImpl.getRepository();
+    private EmployeeServiceImpl() {
+
     }
 
-    public EmployeeService getService() {
-        if (service == null) service = new EmployeeServiceImpl();
-        return service;
-    }
-
-    @Override
-    public Set<Employee> getAll() {
-        return this.repository.getAll();
+    public static EmployeeService getEmployeeService() {
+        if (assembleStatusService == null) assembleStatusService = new EmployeeServiceImpl();
+        return assembleStatusService;
     }
 
     @Override
-    public Employee create(Employee employee) {
-        return this.repository.create(employee);
+    public Employee create(Employee assembleStatus) {
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Employee update(Employee employee) {
-        return this.repository.update(employee);
+    public Employee read(String s){
+        Optional<Employee> assembleStatus = this.assembleStatusRepository.findById(s);
+        return assembleStatus.orElse(null);
     }
 
     @Override
-    public void delete(Integer integer) {
-        this.repository.delete(id);
+    public Employee update(Employee assembleStatus){
+        return this.assembleStatusRepository.save(assembleStatus);
     }
 
     @Override
-    public Employee read(Integer integer) {
-        return this.repository.read(id);
+    public void delete(String s){
+        this.assembleStatusRepository.deleteById(s);
+    }
+
+    @Override
+    public Employee retrieveByDesc(String assembleDesc){
+        List<Employee> assembleStatuses = getAll();
+        for(Employee assembleStatus: assembleStatuses){
+            if(assembleStatus.getDesc().equalsIgnoreCase(assembleDesc)) return assembleStatus;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Employee> getAll(){
+        return this.assembleStatusRepository.findAll();
     }
 }

@@ -1,18 +1,28 @@
 package wiese.domains.Company;
 
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Objects;
 
 public class Company {
 
+    @Id
     private String companyName, companyAddress, companyId;
+    @OneToMany()
+    private String desc;
 
     public Company() {
     }
 
     public Company(Builder builder) {
-        this.companyName = builder.companyName;
-        this.companyAddress = builder.companyAddress;
         this.companyId = builder.companyId;
+        this.companyAddress=builder.companyAddress;
+        this.companyName=builder.companyName;
+        this.desc = builder.desc;
+    }
+
+    public String getCompanyId() {
+        return companyId;
     }
 
     public String getCompanyAddress() {
@@ -23,20 +33,26 @@ public class Company {
         return companyName;
     }
 
-    public String getCompanyId() {
-        return companyId;
+    public String getDesc(){
+        return desc;
     }
 
-    public void setCompanyId(String companyId) {
-        this.companyId = companyId;
+    @Override
+    public String toString() {
+        return "Company{" +
+                "companyId='" + companyId + '\'' +
+                "companyAddress='" + companyAddress + '\'' +
+                "companyName='" + companyName + '\'' +
+                "desc='" + desc + '\'' +
+                '}';
     }
 
     public static class Builder {
 
-        private String companyName, companyAddress, companyId;
+        private String companyId,companyName, companyAddress, desc;
 
-        public Builder companyName(String companyName) {
-            this.companyName = companyName;
+        public Builder companyId(String companyId) {
+            this.companyId = companyId;
             return this;
         }
 
@@ -45,8 +61,21 @@ public class Company {
             return this;
         }
 
-        public Builder companyId(String companyId) {
-            this.companyId = companyId;
+        public Builder companyName(String companyName) {
+            this.companyName = companyName;
+            return this;
+        }
+
+        public Builder desc(String desc){
+            this.desc = desc;
+            return this;
+        }
+
+        public Builder copy(Company company){
+            this.companyId = company.companyId;
+            this.companyAddress=company.companyAddress;
+            this.companyName=company.companyName;
+            this.desc = company.desc;
             return this;
         }
 
@@ -55,25 +84,4 @@ public class Company {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Company{" +
-                "companyName='" + companyName + '\'' +
-                ", companyAddress='" + companyAddress + '\'' +
-                ", companyId='" + companyId + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Company company = (Company) o;
-        return companyId.equals(company.companyId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(companyId);
-    }
 }
